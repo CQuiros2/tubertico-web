@@ -92,7 +92,7 @@ export function AboutSection() {
                 <div className="w-11 h-11 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center mb-5">
                   {icon}
                 </div>
-                <h3 className="font-display font-bold text-brand-green-dark text-lg mb-2">
+                <h3 className="font-display font-semibold text-brand-green-dark text-lg mb-2">
                   {t(titleKey)}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">

@@ -24,19 +24,21 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
   /* ── Banner variant (homepage CTA) ── */
   if (banner) {
     return (
-      <section className="relative bg-brand-green-dark py-20 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
-          style={{ backgroundImage: 'radial-gradient(circle at 70% 50%, #ffffff 0%, transparent 60%)' }}
+      <section className="relative bg-brand-green-dark py-24 md:py-32 overflow-hidden">
+        {/* Subtle dual-tone depth */}
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(ellipse at 20% 60%, rgba(116,133,53,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 40%, rgba(199,92,25,0.10) 0%, transparent 55%)' }}
         />
-        <div className="relative max-w-2xl mx-auto px-4 text-center">
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="font-display font-bold text-white text-3xl md:text-4xl leading-tight tracking-tight mb-4">
+            <p className="eyebrow text-brand-orange/70 mb-5">{t('label')}</p>
+            <h2 className="font-display font-bold text-white text-3xl md:text-[2.75rem] leading-tight tracking-tight mb-5">
               {t('title')}
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-10">
+            <p className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
               {t('subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
               <Link
                 href={`/${locale}/contacto`}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:-translate-y-0.5 shadow-lg"
@@ -48,12 +50,15 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
                 href={siteConfig.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 hover:border-white/50 text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:bg-white/8"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 hover:border-white/45 text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:bg-white/8"
               >
                 <WhatsAppIcon />
                 WhatsApp
               </a>
             </div>
+            <p className="text-white/20 text-xs tracking-widest uppercase">
+              {siteConfig.contact.email} &nbsp;·&nbsp; {siteConfig.contact.phone}
+            </p>
           </AnimatedSection>
         </div>
       </section>

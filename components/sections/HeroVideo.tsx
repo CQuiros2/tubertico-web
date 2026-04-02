@@ -3,15 +3,15 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+
 
 const CLOUDINARY_VIDEO = 'https://res.cloudinary.com/dv5xfo78c/video/upload/v1734383971/web_tubertico_uxfqyl.mp4';
 
 const brandPillars = [
-  { value: '20 Años',         label: { es: 'Trayectoria comprobada',     en: 'Proven track record'      } },
-  { value: 'Origen',          label: { es: 'Costa Rica · Pococí',        en: 'Costa Rica · Pococí'      } },
-  { value: 'GlobalGAP',       label: { es: 'Certificación activa',       en: 'Active certification'     } },
-  { value: 'Exportación',     label: { es: 'EE.UU. y Europa',            en: 'USA & Europe'             } },
+  { value: { es: 'Calidad',      en: 'Quality'   }, label: { es: 'Selección rigurosa',    en: 'Rigorous selection'   } },
+  { value: { es: 'Origen',       en: 'Origin'    }, label: { es: 'Pococí · Costa Rica',   en: 'Pococí · Costa Rica'  } },
+  { value: { es: 'Certificado',  en: 'Certified' }, label: { es: 'GlobalGAP · FSMA',      en: 'GlobalGAP · FSMA'     } },
+  { value: { es: 'Exportación',  en: 'Export'    }, label: { es: 'EE.UU. y Europa',       en: 'USA & Europe'         } },
 ] as const;
 
 interface HeroVideoProps {
@@ -116,13 +116,13 @@ export function HeroVideo({ locale }: HeroVideoProps) {
           <div className="grid grid-cols-2 md:grid-cols-4">
             {brandPillars.map(({ value, label }, i) => (
               <div
-                key={value}
+                key={value.es}
                 className={`flex flex-col items-center py-5 px-4 gap-1 ${
                   i < 3 ? 'md:border-r border-white/10' : ''
                 } ${i === 0 ? 'border-r border-white/10' : ''}`}
               >
-                <span className="font-display font-bold text-white text-xl md:text-2xl tracking-tight">
-                  {value}
+                <span className="font-display font-semibold text-white text-lg md:text-xl tracking-tight">
+                  {value[lang]}
                 </span>
                 <span className="text-white/50 text-[11px] uppercase tracking-wider text-center leading-tight">
                   {label[lang]}
@@ -131,21 +131,6 @@ export function HeroVideo({ locale }: HeroVideoProps) {
             ))}
           </div>
         </div>
-      </motion.div>
-
-      {/* Scroll cue */}
-      <motion.div
-        className="absolute bottom-[76px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <ChevronDown className="text-white/30" size={20} />
-        </motion.div>
       </motion.div>
 
     </section>
