@@ -9,15 +9,17 @@ import { Button } from '@/components/ui/Button';
 
 type Tab = 'all' | 'products' | 'company';
 
-const productImages = [1, 2, 3, 4, 5, 6, 12].map((n) => ({
-  src: `/images/gallery/product-${n}.jpg`,
-  alt: `Producto ${n}`,
+// Full set: product-1.jpg … product-12.jpg and company-1.jpg … company-12.jpg
+// Drop missing files into public/images/gallery/ and rebuild — no code change needed.
+const productImages = Array.from({ length: 12 }, (_, i) => ({
+  src: `/images/gallery/product-${i + 1}.jpg`,
+  alt: `Producto ${i + 1}`,
   type: 'products' as const,
 }));
 
-const companyImages = [1, 2, 3, 4, 12].map((n) => ({
-  src: `/images/gallery/company-${n}.jpg`,
-  alt: `Compañía ${n}`,
+const companyImages = Array.from({ length: 12 }, (_, i) => ({
+  src: `/images/gallery/company-${i + 1}.jpg`,
+  alt: `Compañía ${i + 1}`,
   type: 'company' as const,
 }));
 
