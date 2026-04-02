@@ -137,12 +137,19 @@ export function Footer({ locale }: FooterProps) {
                   <span className="text-sm">{siteConfig.contact.phone}</span>
                 </a>
               </li>
-              <li className="flex items-start gap-2.5 text-white/65">
-                <MapPin size={14} className="mt-0.5 shrink-0 text-brand-orange/80" />
-                <div>
-                  <p className="text-sm">{siteConfig.contact.address}</p>
-                  <p className="text-xs text-white/40 mt-0.5">{siteConfig.contact.addressDetail}</p>
-                </div>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/Tuberculos+Ticos+S.R.L.+(TUBERTICO)/@10.2754637,-83.7543582,17z/data=!3m1!4b1!4m6!3m5!1s0x8fa0b7dfc3fbd86f:0xb85f0bbf1d63f0b8!8m2!3d10.2754584!4d-83.7517833!16s%2Fg%2F11jn51597t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2.5 text-white/65 hover:text-white transition-colors group"
+                >
+                  <MapPin size={14} className="mt-0.5 shrink-0 text-brand-orange/80 group-hover:text-brand-orange transition-colors" />
+                  <div>
+                    <p className="text-sm">{siteConfig.contact.address}</p>
+                    <p className="text-xs text-white/40 mt-0.5">{siteConfig.contact.addressDetail}</p>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>

@@ -41,7 +41,7 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
               <Link
                 href={`/${locale}/contacto`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:-translate-y-0.5 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:-translate-y-0.5 shadow-[0_2px_10px_rgba(199,92,25,0.35)] hover:shadow-[0_4px_18px_rgba(199,92,25,0.45)]"
               >
                 {t('cta')}
                 <ArrowRight size={15} />
@@ -50,14 +50,14 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
                 href={siteConfig.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 hover:border-white/45 text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:bg-white/8"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 hover:border-white/50 text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.10)]"
               >
                 <WhatsAppIcon />
                 WhatsApp
               </a>
             </div>
             <p className="text-white/20 text-xs tracking-widest uppercase">
-              {siteConfig.contact.email} &nbsp;·&nbsp; {siteConfig.contact.phone}
+              {siteConfig.contact.contactName} &nbsp;·&nbsp; {siteConfig.contact.phone}
             </p>
           </AnimatedSection>
         </div>
@@ -84,6 +84,14 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
           <ul className="flex flex-col gap-6">
             <li>
               <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400 mb-1.5">
+                {t('contact_name_label')}
+              </p>
+              <p className="text-brand-green-dark font-medium text-sm">
+                {siteConfig.contact.contactName}
+              </p>
+            </li>
+            <li>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-400 mb-1.5">
                 {t('email_label')}
               </p>
               <a href={`mailto:${siteConfig.contact.email}`}
@@ -91,9 +99,9 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
                 <Mail size={15} className="text-brand-orange shrink-0" />
                 {siteConfig.contact.email}
               </a>
-              <a href={`mailto:${siteConfig.contact.emailSales}`}
+              <a href={`mailto:${siteConfig.contact.emailOffice}`}
                 className="flex items-center gap-2 text-gray-400 text-sm hover:text-brand-green transition-colors mt-1 ml-[23px]">
-                {siteConfig.contact.emailSales}
+                {siteConfig.contact.emailOffice}
               </a>
             </li>
             <li>
@@ -104,10 +112,6 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
                 className="flex items-center gap-2 text-brand-green-dark font-medium hover:text-brand-green transition-colors">
                 <Phone size={15} className="text-brand-orange shrink-0" />
                 {siteConfig.contact.phone}
-              </a>
-              <a href={`tel:${siteConfig.contact.phoneSales}`}
-                className="flex items-center gap-2 text-gray-400 text-sm hover:text-brand-green transition-colors mt-1 ml-[23px]">
-                {siteConfig.contact.phoneSales}
               </a>
             </li>
             <li>
@@ -136,22 +140,6 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
             <WhatsAppIcon size={17} />
             {t('whatsapp')}
           </a>
-
-          {/* Map */}
-          <div className="rounded-xl overflow-hidden border border-gray-100 aspect-video shadow-sm">
-            <iframe
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                siteConfig.contact.address + ', ' + siteConfig.contact.addressDetail
-              )}&output=embed`}
-              width="100%"
-              height="100%"
-              className="w-full h-full"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Tubertico — ubicación"
-            />
-          </div>
 
         </AnimatedSection>
 
@@ -210,6 +198,22 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
         </AnimatedSection>
 
       </div>
+
+      {/* Full-width map */}
+      <div className="mt-14 -mx-4 sm:-mx-6 lg:-mx-8 rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-[340px] md:h-[400px]">
+        <iframe
+          src="https://maps.google.com/maps?q=Tuberculos+Ticos+S.R.L.+(TUBERTICO)&z=17&output=embed"
+          width="100%"
+          height="100%"
+          className="w-full h-full block"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Tubertico — ubicación"
+          allowFullScreen
+        />
+      </div>
+
     </SectionWrapper>
   );
 }

@@ -70,7 +70,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
   ];
 
   return (
-    <SectionWrapper id="galeria">
+    <SectionWrapper id="galeria" condensedBottom>
       <AnimatedSection className="text-center mb-8">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-green mb-3">
           {t('title')}
@@ -103,7 +103,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
       </div>
 
       {preview && (
-        <AnimatedSection className="text-center mt-10">
+        <AnimatedSection className="text-center mt-8">
           <Button href={`/${locale}/galeria`} variant="outline" size="lg">
             {t('cta')}
           </Button>

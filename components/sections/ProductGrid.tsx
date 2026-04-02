@@ -16,7 +16,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
   const items = featured ? getFeaturedProducts() : products;
 
   return (
-    <SectionWrapper id="productos" className="bg-white">
+    <SectionWrapper id="productos" className="bg-white" condensedBottom>
       <AnimatedSection className="text-center mb-14">
         <p className="eyebrow mb-3">{featured ? 'Exportación' : 'Catálogo'}</p>
         <h2 className="font-display font-bold text-brand-green-dark text-3xl md:text-4xl leading-tight tracking-tight mb-4">
@@ -56,7 +56,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
       </div>
 
       {featured && (
-        <AnimatedSection className="text-center mt-12">
+        <AnimatedSection className="text-center mt-8">
           <Link
             href={`/${locale}/productos`}
             className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm border-2 border-brand-green rounded-full px-8 py-3 hover:bg-brand-green hover:text-white transition-all duration-200"
