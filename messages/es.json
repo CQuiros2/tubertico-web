@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "cta": "Contactar"
+  },
+  "hero": {
+    "tagline": "Calidad en la que pueda confiar",
+    "subtitle": "Empresa costarricense especializada en la producción y exportación de hortalizas, raíces y tubérculos al mercado internacional.",
+    "cta_products": "Ver productos",
+    "cta_contact": "Contáctenos",
+    "scroll": "Descubrir"
+  },
+  "stats": {
+    "years": "Años de experiencia",
+    "hectares": "Hectáreas cultivadas",
+    "projection": "Proyección 2025",
+    "products": "Productos de exportación"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "subtitle": "Raíces, tubérculos y hortalizas seleccionadas bajo los más altos estándares de calidad e inocuidad.",
+    "cta": "Ver todos los productos",
+    "items": {
+      "ayote": { "name": "Ayote", "description": "Hortaliza de excelente calidad, cultivada con estándares internacionales de inocuidad." },
+      "chayote_blanco": { "name": "Chayote Blanco", "description": "Chayote fresco de primera calidad, ideal para mercados internacionales." },
+      "coco_seco": { "name": "Coco Seco", "description": "Coco seco seleccionado, exportado bajo estrictos controles de calidad." },
+      "jengibre": { "name": "Jengibre", "description": "Raíz de jengibre fresco con alta demanda en mercados de EE.UU. y Europa." },
+      "malanga_blanca": { "name": "Malanga Blanca", "description": "Tubérculo de pulpa blanca, rico en carbohidratos y de sabor suave." },
+      "malanga_lila": { "name": "Malanga Lila", "description": "Variedad morada con propiedades nutricionales superiores y alta demanda internacional." },
+      "name_amarillo": { "name": "Ñame Amarillo", "description": "Variedad de ñame de pulpa amarilla, apreciada en mercados americanos y europeos." },
+      "name": { "name": "Ñame", "description": "Tubérculo tradicional costarricense con fuerte demanda en la diáspora latinoamericana." },
+      "yautia_blanco": { "name": "Tiquisque Blanco / Yautia", "description": "Raíz de textura cremosa, ampliamente utilizada en cocinas internacionales." },
+      "yautia_lila": { "name": "Tiquisque Lila / Yautia", "description": "Variedad morada de tiquisque con alto valor nutricional." },
+      "yuca": { "name": "Yuca", "description": "Yuca fresca de alta calidad, uno de los productos de mayor exportación de la región." },
+      "zanahoria": { "name": "Zanahoria", "description": "Zanahoria fresca cultivada con GlobalGAP y estándares FDA." },
+      "camote": { "name": "Camote", "description": "Camote dulce de primera selección, con gran aceptación en el mercado estadounidense." },
+      "yampi": { "name": "Yampi", "description": "Tubérculo tropical de sabor suave y textura firme, ideal para exportación." }
+    }
+  },
+  "about": {
+    "title": "Somos Tubertico",
+    "subtitle": "Más de 20 años conectando Costa Rica con el mundo",
+    "description": "Empresa costarricense con más de 20 años de experiencia en el mercado internacional, especializada en la producción, compra y comercialización de hortalizas, raíces y tubérculos.",
+    "values": "Calidad · Inocuidad · Sostenibilidad · Confianza"
+  },
+  "certifications": {
+    "title": "Certificaciones Internacionales"
+  },
+  "gallery": {
+    "title": "Galería",
+    "subtitle": "Nuestras instalaciones, procesos y productos.",
+    "cta": "Ver galería completa",
+    "tab_all": "Todos",
+    "tab_products": "Productos",
+    "tab_company": "Compañía"
+  },
+  "contact": {
+    "title": "¿Listo para exportar con nosotros?",
+    "subtitle": "Contáctenos para conocer nuestros productos, precios y condiciones de exportación.",
+    "cta": "Contactar ahora",
+    "whatsapp": "WhatsApp Business",
+    "email_label": "Correo",
+    "phone_label": "Teléfono",
+    "address_label": "Dirección",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "company": "Empresa",
+      "message": "Mensaje",
+      "send": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "tagline": "Calidad en la que pueda confiar.",
+    "nav_title": "Navegación",
+    "contact_title": "Contacto",
+    "certs_title": "Certificaciones",
+    "legal": "Política de privacidad",
+    "rights": "© 2025 Tubertico. Todos los derechos reservados."
+  },
+  "pages": {
+    "products": {
+      "title": "Productos",
+      "subtitle": "Catálogo completo de nuestros productos de exportación."
+    },
+    "gallery": {
+      "title": "Galería",
+      "subtitle": "Imágenes de nuestros campos, procesos y productos."
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "Estamos listos para atender su consulta de exportación."
+    }
+  }
+}

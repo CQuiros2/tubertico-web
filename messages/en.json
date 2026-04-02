@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "cta": "Contact Us"
+  },
+  "hero": {
+    "tagline": "Quality You Can Trust",
+    "subtitle": "Costa Rican company specialized in the production and export of vegetables, roots and tubers to the international market.",
+    "cta_products": "View products",
+    "cta_contact": "Contact us",
+    "scroll": "Discover"
+  },
+  "stats": {
+    "years": "Years of experience",
+    "hectares": "Hectares cultivated",
+    "projection": "2025 Projection",
+    "products": "Export products"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Roots, tubers and vegetables selected under the highest standards of quality and food safety.",
+    "cta": "View all products",
+    "items": {
+      "ayote": { "name": "Ayote (Squash)", "description": "High-quality vegetable cultivated to international food safety standards." },
+      "chayote_blanco": { "name": "White Chayote", "description": "Fresh, first-grade chayote, ideal for international markets." },
+      "coco_seco": { "name": "Dried Coconut", "description": "Selected dried coconut exported under strict quality controls." },
+      "jengibre": { "name": "Ginger", "description": "Fresh ginger root with high demand in US and European markets." },
+      "malanga_blanca": { "name": "White Malanga", "description": "White-fleshed tuber, rich in carbohydrates with a mild flavor." },
+      "malanga_lila": { "name": "Purple Malanga", "description": "Purple variety with superior nutritional properties and high international demand." },
+      "name_amarillo": { "name": "Yellow Yam", "description": "Yellow-fleshed yam variety, valued in American and European markets." },
+      "name": { "name": "Yam", "description": "Traditional Costa Rican tuber with strong demand in the Latin American diaspora." },
+      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Creamy-textured root, widely used in international cuisines." },
+      "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Purple taro variety with high nutritional value." },
+      "yuca": { "name": "Cassava (Yuca)", "description": "High-quality fresh cassava, one of the region's top export products." },
+      "zanahoria": { "name": "Carrot", "description": "Fresh carrots grown under GlobalGAP and FDA standards." },
+      "camote": { "name": "Sweet Potato", "description": "Top-grade sweet potato with strong acceptance in the US market." },
+      "yampi": { "name": "Yampi", "description": "Tropical tuber with mild flavor and firm texture, ideal for export." }
+    }
+  },
+  "about": {
+    "title": "We Are Tubertico",
+    "subtitle": "Over 20 years connecting Costa Rica with the world",
+    "description": "Costa Rican company with over 20 years of experience in the international market, specialized in the production, purchase and commercialization of vegetables, roots and tubers.",
+    "values": "Quality · Food Safety · Sustainability · Trust"
+  },
+  "certifications": {
+    "title": "International Certifications"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Our facilities, processes and products.",
+    "cta": "View full gallery",
+    "tab_all": "All",
+    "tab_products": "Products",
+    "tab_company": "Company"
+  },
+  "contact": {
+    "title": "Ready to export with us?",
+    "subtitle": "Contact us to learn about our products, pricing and export terms.",
+    "cta": "Contact now",
+    "whatsapp": "WhatsApp Business",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "address_label": "Address",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "company": "Company",
+      "message": "Message",
+      "send": "Send message"
+    }
+  },
+  "footer": {
+    "tagline": "Quality you can trust.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "certs_title": "Certifications",
+    "legal": "Privacy policy",
+    "rights": "© 2025 Tubertico. All rights reserved."
+  },
+  "pages": {
+    "products": {
+      "title": "Products",
+      "subtitle": "Full catalog of our export-grade products."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "Images of our fields, processes and products."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "We are ready to assist with your export inquiry."
+    }
+  }
+}
