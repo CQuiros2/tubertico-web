@@ -15,8 +15,16 @@ body {
   @apply bg-white text-gray-900 antialiased;
 }
 
+::selection {
+  background-color: #c75c19;
+  color: white;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .eyebrow {
+    @apply text-brand-orange uppercase tracking-[0.15em] text-xs font-semibold;
   }
 }

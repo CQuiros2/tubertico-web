@@ -17,7 +17,8 @@
     "years": "Years of experience",
     "hectares": "Hectares cultivated",
     "projection": "2025 Projection",
-    "products": "Export products"
+    "products": "Export products",
+    "certs": "Certifications"
   },
   "products": {
     "title": "Our Products",

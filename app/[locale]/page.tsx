@@ -1,5 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import { HeroVideo } from '@/components/sections/HeroVideo';
+import { AboutSection } from '@/components/sections/AboutSection';
+import { CertificationsBar } from '@/components/sections/CertificationsBar';
 import { ProductGrid } from '@/components/sections/ProductGrid';
 import { GalleryGrid } from '@/components/sections/GalleryGrid';
 import { ContactSection } from '@/components/sections/ContactSection';
@@ -14,6 +16,8 @@ export default function HomePage({ params: { locale } }: PageProps) {
   return (
     <>
       <HeroVideo locale={locale} />
+      <AboutSection />
+      <CertificationsBar />
       <ProductGrid locale={locale} featured />
       <GalleryGrid locale={locale} preview />
       <ContactSection locale={locale} banner />
