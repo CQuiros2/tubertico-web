@@ -42,10 +42,17 @@
     }
   },
   "about": {
+    "label": "Sobre Nosotros",
     "title": "Somos Tubertico",
-    "subtitle": "Más de 20 años conectando Costa Rica con el mundo",
-    "description": "Empresa costarricense con más de 20 años de experiencia en el mercado internacional, especializada en la producción, compra y comercialización de hortalizas, raíces y tubérculos.",
-    "values": "Calidad · Inocuidad · Sostenibilidad · Confianza"
+    "headline": "Más de 20 años conectando los campos de Pococí con los mercados del mundo.",
+    "description": "Somos una empresa costarricense especializada en la producción, selección y exportación de hortalizas, raíces y tubérculos frescos. Trabajamos directamente con productores locales para garantizar la trazabilidad completa de cada envío.",
+    "description2": "Nuestros productos cumplen los estándares más exigentes de inocuidad alimentaria, y contamos con certificaciones activas GlobalGAP y FSMA que nos permiten acceder a los mercados de Estados Unidos y Europa.",
+    "pillar_quality_title": "Calidad Premium",
+    "pillar_quality_desc": "Selección rigurosa bajo estándares GlobalGAP y FSMA. Trazabilidad completa desde el campo hasta el destino final.",
+    "pillar_origin_title": "Origen Certificado",
+    "pillar_origin_desc": "Producción en Pococí, Limón — región reconocida por la fertilidad de sus suelos y condiciones agroclimáticas ideales.",
+    "pillar_export_title": "Alcance Global",
+    "pillar_export_desc": "Exportamos a mercados en EE.UU. y Europa con cadena de frío, documentación sanitaria y cumplimiento regulatorio completo."
   },
   "certifications": {
     "title": "Certificaciones Internacionales"
@@ -59,10 +66,12 @@
     "tab_company": "Compañía"
   },
   "contact": {
+    "label": "Contacto",
+    "headline": "Hablemos de exportación.",
     "title": "¿Listo para exportar con nosotros?",
     "subtitle": "Contáctenos para conocer nuestros productos, precios y condiciones de exportación.",
     "cta": "Contactar ahora",
-    "whatsapp": "WhatsApp Business",
+    "whatsapp": "Escribir por WhatsApp",
     "email_label": "Correo",
     "phone_label": "Teléfono",
     "address_label": "Dirección",

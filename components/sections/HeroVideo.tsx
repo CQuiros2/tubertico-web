@@ -4,38 +4,42 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import { siteConfig } from '@/lib/siteConfig';
+
+const CLOUDINARY_VIDEO = 'https://res.cloudinary.com/dv5xfo78c/video/upload/v1734383971/web_tubertico_uxfqyl.mp4';
+
+const brandPillars = [
+  { value: '20 Años',         label: { es: 'Trayectoria comprobada',     en: 'Proven track record'      } },
+  { value: 'Origen',          label: { es: 'Costa Rica · Pococí',        en: 'Costa Rica · Pococí'      } },
+  { value: 'GlobalGAP',       label: { es: 'Certificación activa',       en: 'Active certification'     } },
+  { value: 'Exportación',     label: { es: 'EE.UU. y Europa',            en: 'USA & Europe'             } },
+] as const;
 
 interface HeroVideoProps {
   locale: string;
 }
 
-const stats = [
-  { valueKey: 'years', value: '20+', suffix: '' },
-  { valueKey: 'products', value: '14', suffix: '' },
-  { valueKey: 'hectares', value: '1,015', suffix: ' ha' },
-  { valueKey: 'certs', value: '2', suffix: '' },
-] as const;
-
 export function HeroVideo({ locale }: HeroVideoProps) {
-  const t = useTranslations();
+  const t = useTranslations('hero');
+  const lang = locale === 'en' ? 'en' : 'es';
 
   return (
     <section className="relative min-h-dvh flex flex-col overflow-hidden bg-brand-green-dark">
 
-      {/* Background image — always visible as base layer */}
+      {/* Base image — always visible, covers before video loads */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/hero-poster.jpg"
         alt=""
         aria-hidden
         className="absolute inset-0 w-full h-full object-cover object-center"
+        // @ts-expect-error fetchPriority is valid HTML but missing from older React types
+        fetchpriority="high"
       />
 
-      {/* Video — loads on top if available */}
+      {/* Video — overlays the image once loaded */}
       <video
         className="absolute inset-0 w-full h-full object-cover object-center"
-        src="/videos/hero.mp4"
+        src={CLOUDINARY_VIDEO}
         autoPlay
         muted
         loop
@@ -43,84 +47,85 @@ export function HeroVideo({ locale }: HeroVideoProps) {
         poster="/images/hero-poster.jpg"
       />
 
-      {/* Multi-layer gradient overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/75" />
-      <div className="absolute inset-0 bg-brand-green-dark/25" />
+      {/* Single clean gradient — no tinted overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/80" />
 
-      {/* Hero content — vertically centered, leaves room for stats strip */}
+      {/* Content */}
       <div className="relative z-10 flex-1 flex items-center justify-center px-4 pt-24 pb-8">
         <div className="text-center max-w-4xl mx-auto">
 
-          {/* Eyebrow */}
           <motion.p
             className="eyebrow text-brand-orange mb-5"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
+            transition={{ duration: 0.45, delay: 0.1 }}
           >
             Costa Rica · Pococí, Limón
           </motion.p>
 
-          {/* Headline */}
           <motion.h1
             className="font-display font-bold text-white leading-[1.05] tracking-tight text-balance mb-6
-                       text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-            initial={{ opacity: 0, y: 24 }}
+                       text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem]"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {t('hero.tagline')}
+            {t('tagline')}
           </motion.h1>
 
-          {/* Subtitle */}
           <motion.p
-            className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-10"
-            initial={{ opacity: 0, y: 16 }}
+            className="text-white/75 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-10"
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
           >
-            {t('hero.subtitle')}
+            {t('subtitle')}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             className="flex flex-col sm:flex-row gap-3 justify-center"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.55 }}
+            transition={{ duration: 0.45, delay: 0.5 }}
           >
             <Link
               href={`/${locale}/productos`}
               className="inline-flex items-center justify-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
-              {t('hero.cta_products')}
+              {t('cta_products')}
             </Link>
             <Link
               href={`/${locale}/contacto`}
-              className="inline-flex items-center justify-center rounded-full border-2 border-white/50 hover:border-white text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/40 hover:border-white/70 text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 hover:bg-white/10"
             >
-              {t('hero.cta_contact')}
+              {t('cta_contact')}
             </Link>
           </motion.div>
+
         </div>
       </div>
 
-      {/* Stats strip — pinned to bottom of hero */}
+      {/* Brand pillars strip */}
       <motion.div
-        className="relative z-10 w-full bg-black/45 backdrop-blur-sm border-t border-white/10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.75 }}
+        className="relative z-10 w-full bg-black/50 backdrop-blur-sm border-t border-white/10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-            {stats.map(({ valueKey, value, suffix }) => (
-              <div key={valueKey} className="flex flex-col items-center py-5 px-4 gap-1">
-                <span className="font-display font-bold text-white text-2xl md:text-3xl tracking-tight">
-                  {value}{suffix}
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {brandPillars.map(({ value, label }, i) => (
+              <div
+                key={value}
+                className={`flex flex-col items-center py-5 px-4 gap-1 ${
+                  i < 3 ? 'md:border-r border-white/10' : ''
+                } ${i === 0 ? 'border-r border-white/10' : ''}`}
+              >
+                <span className="font-display font-bold text-white text-xl md:text-2xl tracking-tight">
+                  {value}
                 </span>
-                <span className="text-white/60 text-xs uppercase tracking-wider text-center leading-tight">
-                  {t(`stats.${valueKey}`)}
+                <span className="text-white/50 text-[11px] uppercase tracking-wider text-center leading-tight">
+                  {label[lang]}
                 </span>
               </div>
             ))}
@@ -128,21 +133,18 @@ export function HeroVideo({ locale }: HeroVideoProps) {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll cue */}
       <motion.div
-        className="absolute bottom-[88px] right-6 md:right-10 z-10 hidden md:flex flex-col items-center gap-2"
+        className="absolute bottom-[76px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.5 }}
+        transition={{ delay: 1.0, duration: 0.5 }}
       >
-        <span className="text-white/40 text-[10px] uppercase tracking-[0.2em] rotate-90 origin-center mb-3">
-          Scroll
-        </span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ChevronDown className="text-white/40" size={18} />
+          <ChevronDown className="text-white/30" size={20} />
         </motion.div>
       </motion.div>
 

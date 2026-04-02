@@ -42,10 +42,17 @@
     }
   },
   "about": {
+    "label": "About Us",
     "title": "We Are Tubertico",
-    "subtitle": "Over 20 years connecting Costa Rica with the world",
-    "description": "Costa Rican company with over 20 years of experience in the international market, specialized in the production, purchase and commercialization of vegetables, roots and tubers.",
-    "values": "Quality · Food Safety · Sustainability · Trust"
+    "headline": "Over 20 years connecting the fields of Pococí with markets around the world.",
+    "description": "We are a Costa Rican company specialized in the production, selection and export of fresh vegetables, roots and tubers. We work directly with local growers to guarantee full traceability in every shipment.",
+    "description2": "Our products meet the most demanding food safety standards. With active GlobalGAP and FSMA certifications, we supply buyers in the United States and Europe with confidence.",
+    "pillar_quality_title": "Premium Quality",
+    "pillar_quality_desc": "Rigorous selection under GlobalGAP and FSMA standards. Full traceability from field to final destination.",
+    "pillar_origin_title": "Certified Origin",
+    "pillar_origin_desc": "Grown in Pococí, Limón — a region known for its fertile soils and ideal agroclimatic conditions.",
+    "pillar_export_title": "Global Reach",
+    "pillar_export_desc": "We export to markets in the USA and Europe with cold chain, phytosanitary documentation and full regulatory compliance."
   },
   "certifications": {
     "title": "International Certifications"
@@ -59,10 +66,12 @@
     "tab_company": "Company"
   },
   "contact": {
+    "label": "Contact",
+    "headline": "Let's talk about exporting.",
     "title": "Ready to export with us?",
     "subtitle": "Contact us to learn about our products, pricing and export terms.",
     "cta": "Contact now",
-    "whatsapp": "WhatsApp Business",
+    "whatsapp": "Message on WhatsApp",
     "email_label": "Email",
     "phone_label": "Phone",
     "address_label": "Address",
