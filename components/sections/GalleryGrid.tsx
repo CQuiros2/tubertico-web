@@ -25,6 +25,28 @@ const companyImages = Array.from({ length: 12 }, (_, i) => ({
 
 const allImages = [...productImages, ...companyImages];
 
+// Renders a single gallery tile; returns null if the image fails to load.
+function GalleryImage({ src, alt, delay }: { src: string; alt: string; delay: number }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) return null;
+
+  return (
+    <AnimatedSection delay={delay}>
+      <div className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 50vw, 33vw"
+          onError={() => setFailed(true)}
+        />
+      </div>
+    </AnimatedSection>
+  );
+}
+
 interface GalleryGridProps {
   locale: string;
   preview?: boolean;
@@ -76,17 +98,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
         {displayed.map((img, i) => (
-          <AnimatedSection key={img.src} delay={i * 0.05}>
-            <div className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 group">
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-            </div>
-          </AnimatedSection>
+          <GalleryImage key={img.src} src={img.src} alt={img.alt} delay={i * 0.05} />
         ))}
       </div>
 
