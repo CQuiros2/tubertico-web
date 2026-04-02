@@ -4,6 +4,7 @@ import { AboutSection } from '@/components/sections/AboutSection';
 import { CertificationsBar } from '@/components/sections/CertificationsBar';
 import { ProductGrid } from '@/components/sections/ProductGrid';
 import { GalleryGrid } from '@/components/sections/GalleryGrid';
+import { LocationMap } from '@/components/sections/LocationMap';
 import { ContactSection } from '@/components/sections/ContactSection';
 
 interface PageProps {
@@ -21,6 +22,7 @@ export default function HomePage({ params: { locale } }: PageProps) {
       <ProductGrid locale={locale} featured />
       <GalleryGrid locale={locale} preview />
       <ContactSection locale={locale} banner />
+      <LocationMap />
     </>
   );
 }

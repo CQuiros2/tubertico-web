@@ -23,7 +23,7 @@ export function Header({ locale }: HeaderProps) {
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
+    const handleScroll = () => setScrolled(window.scrollY > 8);
     // Trigger once on mount so inner pages that start mid-page are correct
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -46,8 +46,8 @@ export function Header({ locale }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         solid
-          ? 'bg-brand-green-dark/96 backdrop-blur-md shadow-[0_1px_0_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.18)]'
-          : 'bg-gradient-to-b from-black/40 to-transparent'
+          ? 'bg-brand-green-dark backdrop-blur-md shadow-[0_1px_0_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.18)]'
+          : 'bg-gradient-to-b from-black/65 to-transparent'
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -90,7 +90,7 @@ export function Header({ locale }: HeaderProps) {
             <LangSwitcher locale={locale} />
             <Link
               href={`/${locale}/contacto`}
-              className="inline-flex items-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white text-sm font-semibold px-5 py-[9px] transition-colors duration-150 shadow-sm"
+              className="inline-flex items-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white text-sm font-semibold px-5 py-[9px] transition-all duration-150 shadow-[0_2px_8px_rgba(199,92,25,0.30)] hover:shadow-[0_3px_12px_rgba(199,92,25,0.40)] hover:-translate-y-px"
             >
               {t('cta')}
             </Link>
