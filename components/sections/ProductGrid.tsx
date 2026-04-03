@@ -19,7 +19,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
   return (
     <SectionWrapper id="productos" className="bg-white" condensedBottom>
       <AnimatedSection className="text-center mb-14">
-        <p className="eyebrow mb-3">{featured ? 'Exportación' : 'Catálogo'}</p>
+        <p className="eyebrow mb-3">{featured ? t('eyebrow_export') : t('eyebrow_catalog')}</p>
         <h2 className="font-display font-bold text-brand-green-dark text-3xl md:text-4xl leading-tight tracking-tight mb-4">
           {t('title')}
         </h2>
@@ -37,7 +37,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
                   src={product.image}
                   alt={t(`items.${product.id}.name`)}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-106"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 {/* Subtle gradient at bottom of image */}

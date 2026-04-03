@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/lib/siteConfig';
 
-const routes = ['', '/productos', '/galeria', '/contacto'];
+const routes = ['', '/productos', '/galeria', '/contacto', '/privacidad'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];

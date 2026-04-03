@@ -30,7 +30,7 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
           {es ? 'Política de Privacidad' : 'Privacy Policy'}
         </h1>
         <p className="text-gray-400 text-sm mb-12">
-          {es ? 'Última actualización: abril de 2025' : 'Last updated: April 2025'}
+          {es ? 'Última actualización: abril de 2026' : 'Last updated: April 2026'}
         </p>
 
         <div className="prose prose-gray max-w-none prose-headings:font-display prose-headings:text-brand-green-dark prose-a:text-brand-green">
