@@ -94,6 +94,13 @@
       "error": "Hubo un problema al enviar el mensaje. Por favor intente de nuevo o escríbanos directamente a info@tubertico.com."
     }
   },
+  "catalog": {
+    "eyebrow": "Catálogo Digital",
+    "title": "Nuestro Catálogo de Exportación",
+    "subtitle": "Explore nuestro portafolio completo de productos, certificaciones y capacidades de exportación.",
+    "slide_label": "Página",
+    "zoom_hint": "Ver en pantalla completa"
+  },
   "footer": {
     "tagline": "Calidad en la que pueda confiar.",
     "nav_title": "Navegación",
