@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -21,30 +22,20 @@ interface HeroVideoProps {
 export function HeroVideo({ locale }: HeroVideoProps) {
   const t = useTranslations('hero');
   const lang = locale === 'en' ? 'en' : 'es';
+  const [videoReady, setVideoReady] = useState(false);
 
   return (
     <section className="relative min-h-dvh flex flex-col overflow-hidden bg-brand-green-dark">
 
-      {/* Base image — always visible, covers before video loads */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/images/hero-poster.jpg"
-        alt=""
-        aria-hidden
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        // @ts-expect-error fetchPriority is valid HTML but missing from older React types
-        fetchpriority="high"
-      />
-
-      {/* Video — overlays the image once loaded */}
+      {/* Video — fades in once playback begins; bg-brand-green-dark shows while buffering */}
       <video
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
         src={CLOUDINARY_VIDEO}
         autoPlay
         muted
         loop
         playsInline
-        poster="/images/hero-poster.jpg"
+        onCanPlay={() => setVideoReady(true)}
       />
 
       {/* Single clean gradient — no tinted overlays */}
