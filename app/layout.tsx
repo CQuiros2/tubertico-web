@@ -15,8 +15,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Tubertico — Exportación de Tubérculos Premium',
-  description: 'Exportadora peruana de tubérculos andinos premium.',
+  title: {
+    template: '%s | Tubertico',
+    default: 'Tubertico',
+  },
+  description:
+    'Empresa costarricense especializada en la producción y exportación de hortalizas, raíces y tubérculos frescos certificados GlobalGAP y FSMA.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

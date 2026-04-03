@@ -93,9 +93,13 @@
     "contact_title": "Contact",
     "certs_title": "Certifications",
     "legal": "Privacy policy",
-    "rights": "© 2025 Tubertico. All rights reserved."
+    "rights": "© 2026 Tubertico. All rights reserved."
   },
   "pages": {
+    "home": {
+      "title": "Home",
+      "description": "Costa Rican company specialized in the production and export of fresh vegetables, roots and tubers with GlobalGAP and FSMA certifications."
+    },
     "products": {
       "title": "Products",
       "subtitle": "Full catalog of our export-grade products."

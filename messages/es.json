@@ -93,9 +93,13 @@
     "contact_title": "Contacto",
     "certs_title": "Certificaciones",
     "legal": "Política de privacidad",
-    "rights": "© 2025 Tubertico. Todos los derechos reservados."
+    "rights": "© 2026 Tubertico. Todos los derechos reservados."
   },
   "pages": {
+    "home": {
+      "title": "Inicio",
+      "description": "Empresa costarricense especializada en la producción y exportación de hortalizas, raíces y tubérculos frescos con certificaciones GlobalGAP y FSMA."
+    },
     "products": {
       "title": "Productos",
       "subtitle": "Catálogo completo de nuestros productos de exportación."

@@ -10,15 +10,25 @@ import { Button } from '@/components/ui/Button';
 
 type Tab = 'all' | 'products' | 'company';
 
-// Full set: product-1.jpg … product-12.jpg and company-1.jpg … company-12.jpg
-// Drop missing files into public/images/gallery/ and rebuild — no code change needed.
-const productImages = Array.from({ length: 12 }, (_, i) => ({
+// ─── Gallery image counts ──────────────────────────────────────────────────
+// To add new images:
+//   1. Upload the file to public/images/gallery/ using the naming convention:
+//        product-13.jpg, product-14.jpg, ...
+//        company-13.jpg, company-14.jpg, ...
+//   2. Increment the relevant count below.
+//   3. Run `npm run build` — no other code changes needed.
+// Missing files within the range are skipped automatically.
+const PRODUCT_COUNT = 12;
+const COMPANY_COUNT = 12;
+// ──────────────────────────────────────────────────────────────────────────
+
+const productImages = Array.from({ length: PRODUCT_COUNT }, (_, i) => ({
   src: `/images/gallery/product-${i + 1}.jpg`,
   alt: `Producto ${i + 1}`,
   type: 'products' as const,
 }));
 
-const companyImages = Array.from({ length: 12 }, (_, i) => ({
+const companyImages = Array.from({ length: COMPANY_COUNT }, (_, i) => ({
   src: `/images/gallery/company-${i + 1}.jpg`,
   alt: `Compañía ${i + 1}`,
   type: 'company' as const,

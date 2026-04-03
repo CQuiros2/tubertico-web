@@ -136,7 +136,11 @@ range for both types automatically. Just add the files and rebuild.
 Source filenames on the old site: `productos1.jpg`…`productos12.jpg` and `compania1.jpg`…`compania12.jpg`
 (available at `https://tubertico.com/img/`)
 
-After adding files: run `npm run build` — no component edits required.
+After adding files:
+1. Increment `PRODUCT_COUNT` or `COMPANY_COUNT` in `components/sections/GalleryGrid.tsx`.
+2. Run `npm run build`. No other code changes needed.
+
+Missing files within the declared range are skipped automatically.
 
 ## Milestone Status
 - [x] Project initialized — Next.js 14 + TS + Tailwind + next-intl v4
@@ -149,12 +153,19 @@ After adding files: run `npm run build` — no component edits required.
 - [x] 12 gallery images downloaded (server rate-limited remaining)
 - [x] siteConfig.ts, products.ts populated with real data
 - [x] Committed and pushed to `CQuiros2/tubertico-web` — `main`
+- [x] Gallery lightbox with keyboard navigation
+- [x] ProductGrid closing CTA with WhatsApp and contact buttons
+- [x] Browser language detection for automatic locale routing
+- [x] Page titles with `Page | Tubertico` template for all routes
+- [x] Favicon metadata configured (requires `public/favicon.png`)
+- [x] Bilingual README and v1 release notes
+- [ ] Add `public/favicon.png` — company favicon file
 - [ ] Upload remaining gallery images manually (product-7–11, company-5–11)
+- [ ] Wire contact form to a service (Formspree, Web3Forms, or EmailJS)
 - [ ] Add hero video if one exists (currently using hero-poster.jpg)
 - [ ] DigitalOcean App Platform setup (build: `npm run build`, output: `out`)
 - [ ] Connect custom domain + DNS
 - [ ] Add Google Analytics ID to env vars (`NEXT_PUBLIC_GA_ID`)
-- [ ] Add Google Maps API key (`NEXT_PUBLIC_MAPS_API_KEY`)
 
 ## Deploy
 ```
