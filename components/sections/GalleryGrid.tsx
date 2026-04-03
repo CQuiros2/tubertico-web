@@ -258,6 +258,19 @@ export function GalleryGrid({ locale, preview, condensedTop }: GalleryGridProps)
             </Button>
           </AnimatedSection>
         )}
+
+        {!preview && (
+          <AnimatedSection className="mt-12">
+            <div className="border-t border-brand-green/10 pt-10 text-center max-w-xl mx-auto">
+              <p className="text-gray-500 text-base leading-relaxed mb-5">
+                {t('closing_note')}
+              </p>
+              <Button href={`/${locale}/contacto`} variant="outline" size="sm">
+                {t('closing_cta')}
+              </Button>
+            </div>
+          </AnimatedSection>
+        )}
       </SectionWrapper>
 
       {lightbox.open && (

@@ -90,13 +90,13 @@ export function HeroVideo({ locale }: HeroVideoProps) {
           >
             <Link
               href={`/${locale}/productos`}
-              className="inline-flex items-center justify-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 shadow-[0_2px_10px_rgba(199,92,25,0.40)] hover:shadow-[0_4px_20px_rgba(199,92,25,0.50)] hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-base px-8 py-2.5 sm:py-3.5 transition-all duration-200 shadow-[0_2px_10px_rgba(199,92,25,0.40)] hover:shadow-[0_4px_20px_rgba(199,92,25,0.50)] hover:-translate-y-0.5"
             >
               {t('cta_products')}
             </Link>
             <Link
               href={`/${locale}/contacto`}
-              className="inline-flex items-center justify-center rounded-full border border-white/35 hover:border-white/65 text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]"
+              className="inline-flex items-center justify-center rounded-full border border-white/35 hover:border-white/65 text-white font-semibold text-base px-8 py-2.5 sm:py-3.5 transition-all duration-200 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]"
             >
               {t('cta_contact')}
             </Link>

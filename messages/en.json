@@ -68,7 +68,9 @@
     "cta": "View full gallery",
     "tab_all": "All",
     "tab_products": "Products",
-    "tab_company": "Company"
+    "tab_company": "Company",
+    "closing_note": "Didn't find what you were looking for? Contact us directly and we'll be happy to share real product photos, specifications, and availability.",
+    "closing_cta": "Request information"
   },
   "contact": {
     "label": "Contact",
@@ -97,7 +99,7 @@
   "catalog": {
     "eyebrow": "Digital Catalog",
     "title": "Our Export Catalog",
-    "subtitle": "Explore our full portfolio of products, certifications, and export capabilities.",
+    "subtitle": "Reference material featuring a selection of our products, certifications, and export capabilities. Contact us to learn about our full offering.",
     "slide_label": "Page",
     "zoom_hint": "View full screen"
   },

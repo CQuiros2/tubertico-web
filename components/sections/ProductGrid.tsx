@@ -77,7 +77,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href={`/${locale}/contacto`}
-                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-7 py-3 hover:bg-brand-green-mid transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-7 py-2 sm:py-3 hover:bg-brand-green-mid transition-all duration-200"
               >
                 {t('closing_cta_contact')}
                 <ArrowRight size={15} />
@@ -86,7 +86,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
                 href={siteConfig.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-brand-orange text-brand-orange font-semibold text-sm rounded-full px-7 py-3 hover:bg-brand-orange hover:text-white transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 border-2 border-brand-orange text-brand-orange font-semibold text-sm rounded-full px-7 py-2 sm:py-3 hover:bg-brand-orange hover:text-white transition-all duration-200"
               >
                 <MessageCircle size={15} />
                 {t('closing_cta_whatsapp')}

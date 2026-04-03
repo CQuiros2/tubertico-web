@@ -75,9 +75,6 @@ export function AboutSection() {
                 <span className="bg-brand-green-dark/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full">
                   Costa Rica
                 </span>
-                <span className="bg-black/50 backdrop-blur-sm text-white/80 text-xs px-3 py-1.5 rounded-full">
-                  Est. 2000+
-                </span>
               </div>
             </div>
           </AnimatedSection>
