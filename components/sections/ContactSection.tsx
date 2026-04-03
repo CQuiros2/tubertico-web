@@ -1,9 +1,14 @@
+'use client';
+
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/SectionWrapper';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { siteConfig } from '@/lib/siteConfig';
+
+type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 interface ContactSectionProps {
   locale: string;
@@ -20,6 +25,26 @@ function WhatsAppIcon({ size = 18 }: { size?: number }) {
 
 export function ContactSection({ locale, banner }: ContactSectionProps) {
   const t = useTranslations('contact');
+  const [status, setStatus] = useState<FormStatus>('idle');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus('loading');
+
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+    const body = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body,
+      });
+      setStatus(res.ok ? 'success' : 'error');
+    } catch {
+      setStatus('error');
+    }
+  }
 
   /* ── Banner variant (homepage CTA) ── */
   if (banner) {
@@ -145,56 +170,94 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
 
         {/* Form — 3/5 width */}
         <AnimatedSection direction="right" className="lg:col-span-3">
-          <form className="flex flex-col gap-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {status === 'success' ? (
+            <div className="flex flex-col items-start gap-5 py-10">
+              <div className="w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center">
+                <CheckCircle size={24} className="text-brand-green" />
+              </div>
+              <div>
+                <p className="font-display font-bold text-brand-green-dark text-xl mb-1">
+                  {t('form.success_title')}
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
+                  {t('form.success_body')}
+                </p>
+              </div>
+              <button
+                onClick={() => setStatus('idle')}
+                className="text-sm text-brand-green font-medium hover:text-brand-green-mid transition-colors underline underline-offset-2"
+              >
+                {t('form.send_another')}
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
+                    {t('form.name')} <span className="text-brand-orange">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    disabled={status === 'loading'}
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors disabled:opacity-60"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
+                    {t('form.company')}
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    disabled={status === 'loading'}
+                    className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors disabled:opacity-60"
+                  />
+                </div>
+              </div>
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                  {t('form.name')} <span className="text-brand-orange">*</span>
+                  {t('form.email')} <span className="text-brand-orange">*</span>
                 </label>
                 <input
-                  type="text"
+                  type="email"
+                  name="email"
                   required
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors"
+                  disabled={status === 'loading'}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors disabled:opacity-60"
                 />
               </div>
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                  {t('form.company')}
+                  {t('form.message')} <span className="text-brand-orange">*</span>
                 </label>
-                <input
-                  type="text"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors"
+                <textarea
+                  name="message"
+                  rows={6}
+                  required
+                  disabled={status === 'loading'}
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors resize-none disabled:opacity-60"
                 />
               </div>
-            </div>
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                {t('form.email')} <span className="text-brand-orange">*</span>
-              </label>
-              <input
-                type="email"
-                required
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">
-                {t('form.message')} <span className="text-brand-orange">*</span>
-              </label>
-              <textarea
-                rows={6}
-                required
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green transition-colors resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="self-start inline-flex items-center gap-2 rounded-full bg-brand-green hover:bg-brand-green-mid text-white font-semibold text-sm px-8 py-3.5 transition-all duration-200 shadow-sm hover:shadow-md"
-            >
-              {t('form.send')}
-              <ArrowRight size={15} />
-            </button>
-          </form>
+
+              {status === 'error' && (
+                <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3 leading-relaxed">
+                  {t('form.error')}
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="self-start inline-flex items-center gap-2 rounded-full bg-brand-green hover:bg-brand-green-mid text-white font-semibold text-sm px-8 py-3.5 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? t('form.sending') : t('form.send')}
+                {status !== 'loading' && <ArrowRight size={15} />}
+              </button>
+            </form>
+          )}
         </AnimatedSection>
 
       </div>

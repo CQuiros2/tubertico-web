@@ -161,7 +161,7 @@ Missing files within the declared range are skipped automatically.
 - [x] Bilingual README and v1 release notes
 - [ ] Add `public/favicon.png` — company favicon file
 - [ ] Upload remaining gallery images manually (product-7–11, company-5–11)
-- [ ] Wire contact form to a service (Formspree, Web3Forms, or EmailJS)
+- [x] Contact form wired to Formspree (requires `NEXT_PUBLIC_FORMSPREE_ID` env var at build time)
 - [ ] Add hero video if one exists (currently using hero-poster.jpg)
 - [ ] DigitalOcean App Platform setup (build: `npm run build`, output: `out`)
 - [ ] Connect custom domain + DNS
@@ -178,5 +178,12 @@ Node version:   18.x or 20.x
 ```
 NEXT_PUBLIC_SITE_URL=https://tubertico.com
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_MAPS_API_KEY=<key>
+NEXT_PUBLIC_FORMSPREE_ID=<form_id>       # formspree.io form ID — must be set before npm run build
+NEXT_PUBLIC_MAPS_API_KEY=<key>           # optional, for future Maps API upgrade
 ```
+
+### Maintaining the contact form
+The form posts to `https://formspree.io/f/$NEXT_PUBLIC_FORMSPREE_ID` (Formspree free tier).
+- **To update the destination email**: formspree.io → form settings → notifications.
+- **To change form fields**: update `name` attributes on inputs in `ContactSection.tsx`. Formspree captures all submitted fields automatically — no dashboard changes needed.
+- **Build requirement**: `NEXT_PUBLIC_FORMSPREE_ID` is inlined at build time (static export). Changing the form ID requires a rebuild and redeploy.

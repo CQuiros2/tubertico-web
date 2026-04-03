@@ -40,10 +40,13 @@ Version 1.0 of the Tubertico corporate website — a bilingual (Spanish / Englis
 
 ## Known limitations for v1
 
-- **Contact form:** The form UI is present but not wired to a backend. Submissions do nothing. This needs a form service (Formspree, Web3Forms, or similar) before going live.
 - **Gallery images:** 7 product and 8 company gallery slots are pending manual upload. The gallery handles missing images gracefully — they are simply skipped.
 - **Hero video:** The hero section uses a static poster image. A video file can be added to `public/videos/hero.mp4` to enable autoplay.
 - **Google Analytics:** Not configured. Add `NEXT_PUBLIC_GA_ID` environment variable to enable.
+
+## Configuration required before going live
+
+- Set `NEXT_PUBLIC_FORMSPREE_ID` environment variable (form ID from formspree.io) before building. The contact form will not submit without it.
 
 ---
 

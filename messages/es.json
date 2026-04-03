@@ -84,7 +84,12 @@
       "email": "Correo electrónico",
       "company": "Empresa",
       "message": "Mensaje",
-      "send": "Enviar mensaje"
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success_title": "Mensaje enviado",
+      "success_body": "Gracias por contactarnos. Nos pondremos en contacto con usted a la brevedad.",
+      "send_another": "Enviar otro mensaje",
+      "error": "Hubo un problema al enviar el mensaje. Por favor intente de nuevo o escríbanos directamente a info@tubertico.com."
     }
   },
   "footer": {
