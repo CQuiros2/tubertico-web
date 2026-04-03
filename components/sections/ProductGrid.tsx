@@ -74,7 +74,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
             <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-7">
               {t('closing_note')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col items-center sm:flex-row gap-3 justify-center">
               <Link
                 href={`/${locale}/contacto`}
                 className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-4 sm:px-7 py-1.5 sm:py-3 hover:bg-brand-green-mid transition-all duration-200"

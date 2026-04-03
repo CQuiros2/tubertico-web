@@ -63,7 +63,7 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
             <p className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto">
               {t('subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+            <div className="flex flex-col items-center sm:flex-row gap-3 justify-center mb-10">
               <Link
                 href={`/${locale}/contacto`}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-8 py-3.5 transition-all duration-200 hover:-translate-y-0.5 shadow-[0_2px_10px_rgba(199,92,25,0.35)] hover:shadow-[0_4px_18px_rgba(199,92,25,0.45)]"
