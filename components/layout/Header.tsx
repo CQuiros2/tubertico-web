@@ -126,7 +126,7 @@ export function Header({ locale }: HeaderProps) {
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex items-center justify-center w-10 h-10 text-white rounded-lg hover:bg-white/10 transition-colors"
+              className="md:hidden flex items-center justify-center w-10 h-10 mr-1 text-white rounded-lg hover:bg-white/10 transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
