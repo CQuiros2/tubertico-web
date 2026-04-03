@@ -196,7 +196,28 @@ export function Header({ locale }: HeaderProps) {
 
               {/* Drawer footer — pb-10 gives clearance for iPhone home indicator */}
               <div className="px-5 pb-10 flex flex-col gap-3 border-t border-white/8 pt-5">
-                <LangSwitcher locale={locale} />
+
+                {/* Mobile language switcher — full-width segmented control.
+                    The desktop header uses LangSwitcher (compact pill).
+                    Here we need a wider, taller touch target that fills
+                    the drawer width and reads as a deliberate mobile control. */}
+                <div className="flex w-full rounded-xl overflow-hidden border border-white/20 bg-white/8">
+                  {(['es', 'en'] as const).map((lang) => (
+                    <Link
+                      key={lang}
+                      href={pathname.replace(`/${locale}`, `/${lang}`) || `/${lang}`}
+                      onClick={() => setMobileOpen(false)}
+                      className={`flex-1 py-3 text-center text-sm font-semibold uppercase tracking-widest transition-colors duration-200 ${
+                        locale === lang
+                          ? 'bg-white text-brand-green'
+                          : 'text-white/50 hover:text-white/80'
+                      }`}
+                    >
+                      {lang}
+                    </Link>
+                  ))}
+                </div>
+
                 <Link
                   href={`/${locale}/contacto`}
                   onClick={() => setMobileOpen(false)}
