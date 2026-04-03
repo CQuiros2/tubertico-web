@@ -93,7 +93,7 @@ function Lightbox({
 
       {/* Image */}
       <div
-        className="relative w-full max-w-4xl mx-16 aspect-[4/3]"
+        className="relative w-full max-w-4xl mx-10 sm:mx-16 aspect-[4/3]"
         onClick={(e) => e.stopPropagation()}
       >
         <Image

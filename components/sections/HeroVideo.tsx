@@ -119,7 +119,7 @@ export function HeroVideo({ locale }: HeroVideoProps) {
                 key={value.es}
                 className={`flex flex-col items-center py-5 px-4 gap-1 ${
                   i < 3 ? 'md:border-r border-white/10' : ''
-                } ${i === 0 ? 'border-r border-white/10' : ''}`}
+                } ${i === 0 || i === 2 ? 'border-r border-white/10' : ''}`}
               >
                 <span className="font-display font-semibold text-white text-lg md:text-xl tracking-tight">
                   {value[lang]}
