@@ -72,7 +72,7 @@ export function Header({ locale }: HeaderProps) {
           drawer (z-[60]) are siblings rendered below — not inside this
           element — to avoid fixed-in-fixed stacking context issues on iOS. */}
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
           solid
             ? 'bg-brand-green-dark backdrop-blur-md shadow-[0_1px_0_rgba(255,255,255,0.06),0_4px_24px_rgba(0,0,0,0.18)]'
             : 'bg-gradient-to-b from-black/65 to-transparent'

@@ -60,7 +60,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
         <AnimatedSection className="text-center mt-5">
           <Link
             href={`/${locale}/productos`}
-            className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm border-2 border-brand-green rounded-full px-8 py-3 hover:bg-brand-green hover:text-white transition-all duration-200"
+            className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm border-2 border-brand-green rounded-full px-5 sm:px-8 py-1.5 sm:py-3 hover:bg-brand-green hover:text-white transition-all duration-200"
           >
             {t('cta')}
             <ArrowRight size={16} />
@@ -77,7 +77,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href={`/${locale}/contacto`}
-                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-7 py-1.5 sm:py-3 hover:bg-brand-green-mid transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-4 sm:px-7 py-1.5 sm:py-3 hover:bg-brand-green-mid transition-all duration-200"
               >
                 {t('closing_cta_contact')}
                 <ArrowRight size={15} />
@@ -86,7 +86,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
                 href={siteConfig.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-brand-orange text-brand-orange font-semibold text-sm rounded-full px-7 py-1.5 sm:py-3 hover:bg-brand-orange hover:text-white transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 border-2 border-brand-orange text-brand-orange font-semibold text-sm rounded-full px-4 sm:px-7 py-1.5 sm:py-3 hover:bg-brand-orange hover:text-white transition-all duration-200"
               >
                 <MessageCircle size={15} />
                 {t('closing_cta_whatsapp')}
