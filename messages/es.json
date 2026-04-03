@@ -24,6 +24,9 @@
     "title": "Nuestros Productos",
     "subtitle": "Raíces, tubérculos y hortalizas seleccionadas bajo los más altos estándares de calidad e inocuidad.",
     "cta": "Ver todos los productos",
+    "closing_note": "Estos son algunos de nuestros productos. También manejamos muchas más variedades y presentaciones según las necesidades de cada cliente.",
+    "closing_cta_contact": "Contáctenos para más información",
+    "closing_cta_whatsapp": "Escribir por WhatsApp",
     "items": {
       "ayote": { "name": "Ayote", "description": "Hortaliza de excelente calidad, cultivada con estándares internacionales de inocuidad." },
       "chayote_blanco": { "name": "Chayote Blanco", "description": "Chayote fresco de primera calidad, ideal para mercados internacionales." },

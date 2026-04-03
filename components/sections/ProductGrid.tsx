@@ -1,10 +1,11 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/SectionWrapper';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { products, getFeaturedProducts } from '@/lib/products';
+import { siteConfig } from '@/lib/siteConfig';
 
 interface ProductGridProps {
   locale: string;
@@ -64,6 +65,34 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
             {t('cta')}
             <ArrowRight size={16} />
           </Link>
+        </AnimatedSection>
+      )}
+
+      {!featured && (
+        <AnimatedSection className="mt-14">
+          <div className="bg-brand-cream border border-brand-green/15 rounded-2xl px-8 py-10 text-center max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-7">
+              {t('closing_note')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href={`/${locale}/contacto`}
+                className="inline-flex items-center justify-center gap-2 bg-brand-green text-white font-semibold text-sm rounded-full px-7 py-3 hover:bg-brand-green-mid transition-all duration-200"
+              >
+                {t('closing_cta_contact')}
+                <ArrowRight size={15} />
+              </Link>
+              <a
+                href={siteConfig.social.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-brand-orange text-brand-orange font-semibold text-sm rounded-full px-7 py-3 hover:bg-brand-orange hover:text-white transition-all duration-200"
+              >
+                <MessageCircle size={15} />
+                {t('closing_cta_whatsapp')}
+              </a>
+            </div>
+          </div>
         </AnimatedSection>
       )}
     </SectionWrapper>

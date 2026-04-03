@@ -24,6 +24,9 @@
     "title": "Our Products",
     "subtitle": "Roots, tubers and vegetables selected under the highest standards of quality and food safety.",
     "cta": "View all products",
+    "closing_note": "These are just some of our products. We also handle many more varieties and presentations tailored to each client's needs.",
+    "closing_cta_contact": "Contact us for more information",
+    "closing_cta_whatsapp": "Message us on WhatsApp",
     "items": {
       "ayote": { "name": "Ayote (Squash)", "description": "High-quality vegetable cultivated to international food safety standards." },
       "chayote_blanco": { "name": "White Chayote", "description": "Fresh, first-grade chayote, ideal for international markets." },
