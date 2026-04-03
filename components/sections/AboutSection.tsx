@@ -67,13 +67,13 @@ export function AboutSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/hero-poster.jpg"
-                alt="Campos de Tubertico — Roxana, Pococí, Limón"
+                alt="Producción agrícola de Tubertico — Costa Rica"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                 <span className="bg-brand-green-dark/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full">
-                  Roxana, Pococí · Limón, Costa Rica
+                  Costa Rica
                 </span>
                 <span className="bg-black/50 backdrop-blur-sm text-white/80 text-xs px-3 py-1.5 rounded-full">
                   Est. 2000+

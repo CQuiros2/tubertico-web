@@ -56,7 +56,7 @@ export function ProductGrid({ locale, featured }: ProductGridProps) {
       </div>
 
       {featured && (
-        <AnimatedSection className="text-center mt-8">
+        <AnimatedSection className="text-center mt-5">
           <Link
             href={`/${locale}/productos`}
             className="inline-flex items-center gap-2 text-brand-green font-semibold text-sm border-2 border-brand-green rounded-full px-8 py-3 hover:bg-brand-green hover:text-white transition-all duration-200"

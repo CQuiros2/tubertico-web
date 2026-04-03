@@ -50,9 +50,10 @@ function GalleryImage({ src, alt, delay }: { src: string; alt: string; delay: nu
 interface GalleryGridProps {
   locale: string;
   preview?: boolean;
+  condensedTop?: boolean;
 }
 
-export function GalleryGrid({ locale, preview }: GalleryGridProps) {
+export function GalleryGrid({ locale, preview, condensedTop }: GalleryGridProps) {
   const t = useTranslations('gallery');
   const [activeTab, setActiveTab] = useState<Tab>('all');
 
@@ -70,7 +71,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
   ];
 
   return (
-    <SectionWrapper id="galeria" condensedBottom>
+    <SectionWrapper id="galeria" condensedBottom condensedTop={condensedTop}>
       <AnimatedSection className="text-center mb-8">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-green mb-3">
           {t('title')}
@@ -84,7 +85,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.key
                   ? 'bg-brand-green text-white shadow'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -103,7 +104,7 @@ export function GalleryGrid({ locale, preview }: GalleryGridProps) {
       </div>
 
       {preview && (
-        <AnimatedSection className="text-center mt-8">
+        <AnimatedSection className="text-center mt-5">
           <Button href={`/${locale}/galeria`} variant="outline" size="lg">
             {t('cta')}
           </Button>

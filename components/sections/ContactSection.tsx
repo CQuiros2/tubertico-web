@@ -24,7 +24,7 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
   /* ── Banner variant (homepage CTA) ── */
   if (banner) {
     return (
-      <section className="relative bg-brand-green-dark py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-brand-green-dark py-16 md:py-24 overflow-hidden">
         {/* Subtle dual-tone depth */}
         <div className="absolute inset-0 pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(ellipse at 20% 60%, rgba(116,133,53,0.18) 0%, transparent 55%), radial-gradient(ellipse at 80% 40%, rgba(199,92,25,0.10) 0%, transparent 55%)' }}

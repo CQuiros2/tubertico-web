@@ -5,29 +5,25 @@ export const siteConfig = {
   locales: ['es', 'en'] as const,
 
   contact: {
-    email: 'info@tubertico.com',
-    emailSales: 'pablo@tubertico.com',
-    phone: '+506 8973-2830',
-    phoneSales: '+506 8948-4292',
-    phoneAlt: '+506 8388-5918',
-    whatsapp: '+50689732830',
+    contactName: 'Pablo Quirós',
+    email: 'pablo.quiros@tubertico.com',
+    emailOffice: 'oficina@tubertico.com',
+    phone: '(+506) 8948-4292',
     address: 'Roxana, Pococí, Limón, Costa Rica',
-    addressDetail: '70m norte de la Escuela Líder Roxana',
-    mapsQuery: 'Roxana,Pococí,Limón,Costa Rica',
+    addressDetail: '248, Provincia de Limón, Roxana, 70204',
+    mapsQuery: 'Tuberculos+Ticos+SRL+Roxana+Pococi',
   },
 
   social: {
     linkedin: 'https://cr.linkedin.com/company/tubertico',
     instagram: 'https://www.instagram.com/tubertico.cr',
     facebook: 'https://www.facebook.com/profile.php?id=61575158159946',
-    whatsapp: 'https://wa.me/50689732830',
+    whatsapp: 'https://wa.me/50689484292',
   },
 
   stats: {
     years: 20,
-    hectares2024: 1015,
-    hectares2025: 1117,
-    products: 14,
+    products: 17,
   },
 
   certifications: ['GlobalGAP V6.0 GFSI', 'FSMA (FDA)'],

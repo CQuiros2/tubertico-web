@@ -20,7 +20,7 @@ export default function HomePage({ params: { locale } }: PageProps) {
       <AboutSection />
       <CertificationsBar />
       <ProductGrid locale={locale} featured />
-      <GalleryGrid locale={locale} preview />
+      <GalleryGrid locale={locale} preview condensedTop />
       <ContactSection locale={locale} banner />
       <LocationMap />
     </>

@@ -8,10 +8,10 @@ import { motion } from 'framer-motion';
 const CLOUDINARY_VIDEO = 'https://res.cloudinary.com/dv5xfo78c/video/upload/v1734383971/web_tubertico_uxfqyl.mp4';
 
 const brandPillars = [
-  { value: { es: 'Calidad',      en: 'Quality'   }, label: { es: 'Selección rigurosa',    en: 'Rigorous selection'   } },
-  { value: { es: 'Origen',       en: 'Origin'    }, label: { es: 'Pococí · Costa Rica',   en: 'Pococí · Costa Rica'  } },
-  { value: { es: 'Certificado',  en: 'Certified' }, label: { es: 'GlobalGAP · FSMA',      en: 'GlobalGAP · FSMA'     } },
-  { value: { es: 'Exportación',  en: 'Export'    }, label: { es: 'EE.UU. y Europa',       en: 'USA & Europe'         } },
+  { value: { es: '+20 Años',      en: '+20 Years'   }, label: { es: 'en el mercado',       en: 'in the market'      } },
+  { value: { es: '+17 Productos', en: '+17 Products' }, label: { es: 'disponibles',         en: 'available'          } },
+  { value: { es: 'Calidad',       en: 'Quality'      }, label: { es: 'e inocuidad',         en: '& food safety'      } },
+  { value: { es: 'Exportación',   en: 'Export'       }, label: { es: 'global',              en: 'global'             } },
 ] as const;
 
 interface HeroVideoProps {
@@ -60,7 +60,7 @@ export function HeroVideo({ locale }: HeroVideoProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.1 }}
           >
-            Costa Rica · Pococí, Limón
+            Costa Rica
           </motion.p>
 
           <motion.h1
@@ -90,13 +90,13 @@ export function HeroVideo({ locale }: HeroVideoProps) {
           >
             <Link
               href={`/${locale}/productos`}
-              className="inline-flex items-center justify-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 shadow-[0_2px_10px_rgba(199,92,25,0.40)] hover:shadow-[0_4px_20px_rgba(199,92,25,0.50)] hover:-translate-y-0.5"
             >
               {t('cta_products')}
             </Link>
             <Link
               href={`/${locale}/contacto`}
-              className="inline-flex items-center justify-center rounded-full border border-white/40 hover:border-white/70 text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/35 hover:border-white/65 text-white font-semibold text-base px-8 py-3.5 transition-all duration-200 hover:bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]"
             >
               {t('cta_contact')}
             </Link>

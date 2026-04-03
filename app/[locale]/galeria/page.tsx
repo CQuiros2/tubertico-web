@@ -18,9 +18,5 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
 export default function GaleriaPage({ params: { locale } }: PageProps) {
   setRequestLocale(locale);
 
-  return (
-    <div className="pt-20">
-      <GalleryGrid locale={locale} />
-    </div>
-  );
+  return <GalleryGrid locale={locale} />;
 }

@@ -18,9 +18,5 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
 export default function ContactoPage({ params: { locale } }: PageProps) {
   setRequestLocale(locale);
 
-  return (
-    <div className="pt-20">
-      <ContactSection locale={locale} />
-    </div>
-  );
+  return <ContactSection locale={locale} />;
 }
