@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(node node_modules/.bin/next build)",
+      "Bash(npx kill-port:*)",
+      "Bash(rm -rf .next)",
+      "Bash(sort echo:*)",
+      "Bash(ls D:/tubertico-web/migration/legacy-static/img/productos*.jpg D:/tubertico-web/migration/legacy-static/img/productos*.jpeg)",
+      "Bash(ls D:/tubertico-web/migration/legacy-static/img/compania*.jpg D:/tubertico-web/migration/legacy-static/img/compania*.jpeg)",
+      "Bash(certutil -hashfile \"D:/tubertico-web/migration/legacy-static/img/fondo_producto.jpg\" MD5)",
+      "Bash(certutil -hashfile \"D:/tubertico-web/migration/legacy-static/img/productos1.jpg\" MD5)",
+      "Bash(python3 -c ':*)",
+      "Bash(identify D:/tubertico-web/migration/legacy-static/img/PDFS/Eng/0.jpg)",
+      "mcp__plugin_claude-mem_mcp-search__get_observations",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/productos7.jpeg /d/Tubertico/public/images/gallery/product-7.jpg)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/productos8.jpeg /d/Tubertico/public/images/gallery/product-8.jpg)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/productos9.jpeg /d/Tubertico/public/images/gallery/product-9.jpg)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/productos10.jpeg /d/Tubertico/public/images/gallery/product-10.jpg)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/productos11.jpeg /d/Tubertico/public/images/gallery/product-11.jpg)",
+      "Bash(mkdir -p /d/Tubertico/public/images/catalog/es /d/Tubertico/public/images/catalog/en)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/PDFS/Esp/*.jpg /d/Tubertico/public/images/catalog/es/)",
+      "Bash(cp /d/tubertico-web/migration/legacy-static/img/PDFS/Eng/*.jpg /d/Tubertico/public/images/catalog/en/)",
+      "Bash(wait:*)",
+      "Bash(npx next:*)",
+      "Bash(node_modules/.bin/next build:*)",
+      "Bash(git pull:*)"
+    ]
+  }
+}
