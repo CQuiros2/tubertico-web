@@ -1,0 +1,19 @@
+name: Redeploy from Sanity
+
+on:
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Trigger DigitalOcean redeploy
+        run: doctl apps create-deployment ${{ secrets.DIGITALOCEAN_APP_ID }}
