@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { LangSwitcher } from '@/components/ui/LangSwitcher';
+import { getLocalizedHref } from '@/lib/localeRoutes';
 
 interface HeaderProps {
   locale: string;
@@ -57,6 +58,7 @@ export function Header({ locale }: HeaderProps) {
     { href: `/${locale}`,           label: t('home')     },
     { href: `/${locale}/productos`, label: t('products') },
     { href: `/${locale}/galeria`,   label: t('gallery')  },
+    { href: `/${locale}/${locale === 'es' ? 'noticias' : 'news'}`, label: t('news') },
     { href: `/${locale}/contacto`,  label: t('contact')  },
   ];
 
@@ -205,7 +207,7 @@ export function Header({ locale }: HeaderProps) {
                   {(['es', 'en'] as const).map((lang) => (
                     <Link
                       key={lang}
-                      href={pathname.replace(`/${locale}`, `/${lang}`) || `/${lang}`}
+                      href={getLocalizedHref(pathname, locale, lang)}
                       onClick={() => setMobileOpen(false)}
                       className={`flex-1 py-3 text-center text-sm font-semibold uppercase tracking-widest transition-colors duration-200 ${
                         locale === lang

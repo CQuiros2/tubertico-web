@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { getLocalizedHref } from '@/lib/localeRoutes';
 
 interface LangSwitcherProps {
   locale: string;
@@ -11,8 +12,7 @@ export function LangSwitcher({ locale }: LangSwitcherProps) {
   const pathname = usePathname();
 
   const getLocalePath = (targetLocale: string) => {
-    // Replace the current locale segment with the target locale
-    return pathname.replace(`/${locale}`, `/${targetLocale}`) || `/${targetLocale}`;
+    return getLocalizedHref(pathname, locale, targetLocale);
   };
 
   return (

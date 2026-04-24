@@ -3,6 +3,7 @@
     "home": "Inicio",
     "products": "Productos",
     "gallery": "Galería",
+    "news": "Noticias",
     "contact": "Contacto",
     "cta": "Contactar"
   },
@@ -72,6 +73,16 @@
     "closing_note": "¿No encontró el producto que busca? Contáctenos directamente y con gusto le compartimos fotos, especificaciones y disponibilidad.",
     "closing_cta": "Solicitar información"
   },
+  "noticias": {
+    "eyebrow": "Publicaciones",
+    "title": "Noticias y Blog",
+    "subtitle": "Novedades de Tubertico: empresa, campo, exportaciones y sostenibilidad.",
+    "latest_eyebrow": "Última publicación",
+    "latest_cta": "Ver noticias y blog",
+    "type_noticia": "Noticia",
+    "type_blog": "Blog",
+    "empty": "Próximamente publicaremos novedades."
+  },
   "contact": {
     "label": "Contacto",
     "headline": "Hablemos de exportación.",
@@ -127,6 +138,10 @@
     "contact": {
       "title": "Contacto",
       "subtitle": "Estamos listos para atender su consulta de exportación."
+    },
+    "noticias": {
+      "title": "Noticias y Blog",
+      "description": "Últimas noticias y publicaciones de blog de Tubertico."
     }
   }
 }

@@ -7,6 +7,8 @@ import { ProductGrid } from '@/components/sections/ProductGrid';
 import { GalleryGrid } from '@/components/sections/GalleryGrid';
 import { LocationMap } from '@/components/sections/LocationMap';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { PublicacionesLatest } from '@/components/sections/PublicacionesLatest';
+import { getUltimaPublicacion } from '@/lib/sanity/queries';
 
 interface PageProps {
   params: { locale: string };
@@ -20,13 +22,16 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   };
 }
 
-export default function HomePage({ params: { locale } }: PageProps) {
+export default async function HomePage({ params: { locale } }: PageProps) {
   setRequestLocale(locale);
+
+  const ultimaPublicacion = await getUltimaPublicacion().catch(() => null);
 
   return (
     <>
       <HeroVideo locale={locale} />
       <AboutSection />
+      <PublicacionesLatest publicacion={ultimaPublicacion} locale={locale} />
       <CertificationsBar />
       <ProductGrid locale={locale} featured />
       <GalleryGrid locale={locale} preview condensedTop />

@@ -3,6 +3,7 @@
     "home": "Home",
     "products": "Products",
     "gallery": "Gallery",
+    "news": "News",
     "contact": "Contact",
     "cta": "Contact Us"
   },
@@ -72,6 +73,16 @@
     "closing_note": "Didn't find what you were looking for? Contact us directly and we'll be happy to share photos, specifications, and availability.",
     "closing_cta": "Request information"
   },
+  "noticias": {
+    "eyebrow": "News & Blog",
+    "title": "News & Blog",
+    "subtitle": "Updates from Tubertico: company, field, exports and sustainability.",
+    "latest_eyebrow": "Latest post",
+    "latest_cta": "View news and blog",
+    "type_noticia": "News",
+    "type_blog": "Blog",
+    "empty": "We'll be publishing updates soon."
+  },
   "contact": {
     "label": "Contact",
     "headline": "Let's talk about exporting.",
@@ -127,6 +138,10 @@
     "contact": {
       "title": "Contact",
       "subtitle": "We are ready to assist with your export inquiry."
+    },
+    "noticias": {
+      "title": "News & Blog",
+      "description": "Latest news and blog posts from Tubertico."
     }
   }
 }
