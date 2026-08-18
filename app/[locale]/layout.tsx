@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/lib/siteConfig';
-import { inter, playfair } from '../fonts';
 import '../globals.css';
 
 const locales = ['es', 'en', 'fr'];
@@ -38,6 +37,11 @@ export async function generateMetadata({
 // Root layout of the localized site. It renders <html> itself — rather than
 // inheriting a shared one — so each locale ships the correct lang attribute
 // for screen readers and browser translation.
+//
+// Font stacks come from the --font-* variables in globals.css. next/font is
+// deliberately not used: its variable classes and the :root block set the same
+// custom properties with equal specificity, so whichever CSS chunk landed last
+// silently won. globals.css is now the single source of truth.
 export default async function LocaleLayout({
   children,
   params,
@@ -56,7 +60,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
+    <html lang={locale}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header locale={locale} />
