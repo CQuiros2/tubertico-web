@@ -1,15 +1,43 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { siteConfig } from '@/lib/siteConfig';
+import { inter, playfair } from '../fonts';
+import '../globals.css';
 
-const locales = ['es', 'en'];
+const locales = ['es', 'en', 'fr'];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'pages.home' });
+
+  return {
+    metadataBase: new URL(siteConfig.url),
+    title: {
+      template: `%s | ${siteConfig.name}`,
+      default: siteConfig.name,
+    },
+    description: t('description'),
+    icons: {
+      icon: '/favicon.png',
+      apple: '/favicon.png',
+    },
+  };
+}
+
+// Root layout of the localized site. It renders <html> itself — rather than
+// inheriting a shared one — so each locale ships the correct lang attribute
+// for screen readers and browser translation.
 export default async function LocaleLayout({
   children,
   params,
@@ -28,10 +56,14 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <Header locale={locale} />
-      <main>{children}</main>
-      <Footer locale={locale} />
-    </NextIntlClientProvider>
+    <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header locale={locale} />
+          <main>{children}</main>
+          <Footer locale={locale} />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

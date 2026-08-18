@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { AnimatedSection } from '@/components/ui/AnimatedSection'
+import { getNewsPath } from '@/lib/localeRoutes'
 import { urlFor } from '@/lib/sanity/image'
 import type { Publicacion } from '@/types/publicacion'
 
@@ -12,20 +13,22 @@ function formatDate(dateStr: string, locale: string): string {
                     'julio','agosto','septiembre','octubre','noviembre','diciembre']
   const monthsEn = ['January','February','March','April','May','June',
                     'July','August','September','October','November','December']
-  return locale === 'es'
-    ? `${day} de ${monthsEs[month - 1]} de ${year}`
-    : `${monthsEn[month - 1]} ${day}, ${year}`
+  const monthsFr = ['janvier','février','mars','avril','mai','juin',
+                    'juillet','août','septembre','octobre','novembre','décembre']
+  if (locale === 'es') return `${day} de ${monthsEs[month - 1]} de ${year}`
+  if (locale === 'fr') return `${day === 1 ? '1er' : day} ${monthsFr[month - 1]} ${year}`
+  return `${monthsEn[month - 1]} ${day}, ${year}`
 }
 
 const categoryLabel = (cat: string, locale: string): string => {
   const labels: Record<string, Record<string, string>> = {
-    empresa: { es: 'Empresa', en: 'Company' },
-    certificaciones: { es: 'Certificaciones', en: 'Certifications' },
-    exportaciones: { es: 'Exportaciones', en: 'Exports' },
-    campo: { es: 'Campo', en: 'Field' },
-    productos: { es: 'Productos', en: 'Products' },
-    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability' },
-    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety' },
+    empresa: { es: 'Empresa', en: 'Company', fr: 'Entreprise' },
+    certificaciones: { es: 'Certificaciones', en: 'Certifications', fr: 'Certifications' },
+    exportaciones: { es: 'Exportaciones', en: 'Exports', fr: 'Exportations' },
+    campo: { es: 'Campo', en: 'Field', fr: 'Champs' },
+    productos: { es: 'Productos', en: 'Products', fr: 'Produits' },
+    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability', fr: 'Durabilité' },
+    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety', fr: 'Qualité et sécurité alimentaire' },
   }
   return labels[cat]?.[locale] ?? cat
 }
@@ -40,8 +43,12 @@ export function PublicacionesLatest({ publicacion, locale }: Props) {
 
   if (!publicacion) return null
 
-  const titulo = (locale === 'en' && publicacion.tituloEn) ? publicacion.tituloEn : publicacion.tituloEs
-  const resumen = (locale === 'en' && publicacion.resumenEn) ? publicacion.resumenEn : publicacion.resumenEs
+  // Sanity only stores ES/EN copy, so every non-Spanish locale (en, fr)
+  // renders the English version, falling back to Spanish when it's missing.
+  const useEnglishCopy = locale !== 'es'
+
+  const titulo = (useEnglishCopy && publicacion.tituloEn) ? publicacion.tituloEn : publicacion.tituloEs
+  const resumen = (useEnglishCopy && publicacion.resumenEn) ? publicacion.resumenEn : publicacion.resumenEs
   const tipo = publicacion.tipoPublicacion === 'noticia' ? t('type_noticia') : t('type_blog')
   const cat = categoryLabel(publicacion.categoria, locale)
   const fecha = formatDate(publicacion.fechaPublicacion, locale)
@@ -105,7 +112,7 @@ export function PublicacionesLatest({ publicacion, locale }: Props) {
 
               {/* CTA */}
               <Link
-                href={`/${locale}/${locale === 'es' ? 'noticias' : 'news'}`}
+                href={`/${locale}${getNewsPath(locale)}`}
                 className="inline-flex items-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white font-semibold px-6 py-3 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-px"
               >
                 {t('latest_cta')}

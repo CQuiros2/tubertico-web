@@ -9,7 +9,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }]
+  return [{ locale: 'fr' }]
 }
 
 export async function generateMetadata({ params: { locale } }: PageProps): Promise<Metadata> {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   }
 }
 
-export default async function NewsPage({ params: { locale } }: PageProps) {
+export default async function ActualitesPage({ params: { locale } }: PageProps) {
   setRequestLocale(locale)
   const publicaciones = await getTodasLasPublicaciones().catch(() => [])
   return <PublicacionesList publicaciones={publicaciones} locale={locale} />

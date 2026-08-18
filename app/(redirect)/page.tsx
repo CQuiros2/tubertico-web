@@ -8,7 +8,8 @@ export default function RootPage() {
 
   useEffect(() => {
     const lang = (navigator.language || navigator.languages?.[0] || '').toLowerCase();
-    router.replace(lang.startsWith('en') ? '/en' : '/es');
+    const target = lang.startsWith('en') ? '/en' : lang.startsWith('fr') ? '/fr' : '/es';
+    router.replace(target);
   }, [router]);
 
   return null;

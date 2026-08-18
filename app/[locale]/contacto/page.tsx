@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { localeAlternates } from '@/lib/alternates';
 
 interface PageProps {
   params: { locale: string };
@@ -12,6 +13,7 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   return {
     title: t('title'),
     description: t('subtitle'),
+    alternates: localeAlternates(locale, '/contacto'),
   };
 }
 

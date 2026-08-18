@@ -95,9 +95,13 @@ export function CatalogCarousel({ locale }: CatalogCarouselProps) {
   const [current, setCurrent] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
+  // The PDF catalog only exists in Spanish and English —
+  // any other locale (fr) falls back to the English deck.
+  const catalogLang = locale === 'es' ? 'es' : 'en';
+
   const slides = Array.from(
     { length: SLIDE_COUNT },
-    (_, i) => `/images/catalog/${locale}/${i}.jpg`
+    (_, i) => `/images/catalog/${catalogLang}/${i}.jpg`
   );
 
   const goPrev = useCallback(() => {

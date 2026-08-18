@@ -7,7 +7,8 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { LangSwitcher } from '@/components/ui/LangSwitcher';
-import { getLocalizedHref } from '@/lib/localeRoutes';
+import { getLocalizedHref, getNewsPath } from '@/lib/localeRoutes';
+import { siteConfig } from '@/lib/siteConfig';
 
 interface HeaderProps {
   locale: string;
@@ -58,7 +59,7 @@ export function Header({ locale }: HeaderProps) {
     { href: `/${locale}`,           label: t('home')     },
     { href: `/${locale}/productos`, label: t('products') },
     { href: `/${locale}/galeria`,   label: t('gallery')  },
-    { href: `/${locale}/${locale === 'es' ? 'noticias' : 'news'}`, label: t('news') },
+    { href: `/${locale}${getNewsPath(locale)}`, label: t('news') },
     { href: `/${locale}/contacto`,  label: t('contact')  },
   ];
 
@@ -204,11 +205,15 @@ export function Header({ locale }: HeaderProps) {
                     Here we need a wider, taller touch target that fills
                     the drawer width and reads as a deliberate mobile control. */}
                 <div className="flex w-full rounded-xl overflow-hidden border border-white/20 bg-white/8">
-                  {(['es', 'en'] as const).map((lang) => (
+                  {siteConfig.locales.map((lang) => (
                     <Link
                       key={lang}
                       href={getLocalizedHref(pathname, locale, lang)}
                       onClick={() => setMobileOpen(false)}
+                      hrefLang={lang}
+                      lang={lang}
+                      aria-label={siteConfig.localeNames[lang]}
+                      aria-current={locale === lang ? 'true' : undefined}
                       className={`flex-1 py-3 text-center text-sm font-semibold uppercase tracking-widest transition-colors duration-200 ${
                         locale === lang
                           ? 'bg-white text-brand-green'

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { ProductGrid } from '@/components/sections/ProductGrid';
 import { CatalogCarousel } from '@/components/sections/CatalogCarousel';
+import { localeAlternates } from '@/lib/alternates';
 
 interface PageProps {
   params: { locale: string };
@@ -13,6 +14,7 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   return {
     title: t('title'),
     description: t('subtitle'),
+    alternates: localeAlternates(locale, '/productos'),
   };
 }
 

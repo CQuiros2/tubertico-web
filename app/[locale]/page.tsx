@@ -8,6 +8,7 @@ import { GalleryGrid } from '@/components/sections/GalleryGrid';
 import { LocationMap } from '@/components/sections/LocationMap';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { PublicacionesLatest } from '@/components/sections/PublicacionesLatest';
+import { localeAlternates } from '@/lib/alternates';
 import { getUltimaPublicacion } from '@/lib/sanity/queries';
 
 interface PageProps {
@@ -19,6 +20,7 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   return {
     title: t('title'),
     description: t('description'),
+    alternates: localeAlternates(locale, ''),
   };
 }
 

@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { getTodasLasPublicaciones } from '@/lib/sanity/queries'
 import { PublicacionesList } from '@/components/sections/PublicacionesList'
+import { localeAlternates } from '@/lib/alternates'
 
 interface PageProps {
   params: { locale: string }
@@ -16,6 +17,7 @@ export async function generateMetadata({ params: { locale } }: PageProps): Promi
   return {
     title: t('title'),
     description: t('description'),
+    alternates: localeAlternates(locale, '/news'),
   }
 }
 

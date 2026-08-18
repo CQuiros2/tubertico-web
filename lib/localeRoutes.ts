@@ -1,8 +1,14 @@
 // Maps path segments that differ per locale.
 // Add any future locale-specific routes here.
 const routeMap: Record<string, Record<string, string>> = {
-  '/noticias': { es: '/noticias', en: '/news' },
-  '/news':     { es: '/noticias', en: '/news' },
+  '/noticias':   { es: '/noticias', en: '/news', fr: '/actualites' },
+  '/news':       { es: '/noticias', en: '/news', fr: '/actualites' },
+  '/actualites': { es: '/noticias', en: '/news', fr: '/actualites' },
+}
+
+// Path segment of the News & Blog page for a given locale.
+export function getNewsPath(locale: string): string {
+  return routeMap['/noticias'][locale] ?? '/news'
 }
 
 export function getLocalizedHref(

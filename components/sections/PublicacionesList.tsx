@@ -12,20 +12,22 @@ function formatDate(dateStr: string, locale: string): string {
                     'julio','agosto','septiembre','octubre','noviembre','diciembre']
   const monthsEn = ['January','February','March','April','May','June',
                     'July','August','September','October','November','December']
-  return locale === 'es'
-    ? `${day} de ${monthsEs[month - 1]} de ${year}`
-    : `${monthsEn[month - 1]} ${day}, ${year}`
+  const monthsFr = ['janvier','février','mars','avril','mai','juin',
+                    'juillet','août','septembre','octobre','novembre','décembre']
+  if (locale === 'es') return `${day} de ${monthsEs[month - 1]} de ${year}`
+  if (locale === 'fr') return `${day === 1 ? '1er' : day} ${monthsFr[month - 1]} ${year}`
+  return `${monthsEn[month - 1]} ${day}, ${year}`
 }
 
 const categoryLabel = (cat: string, locale: string): string => {
   const labels: Record<string, Record<string, string>> = {
-    empresa: { es: 'Empresa', en: 'Company' },
-    certificaciones: { es: 'Certificaciones', en: 'Certifications' },
-    exportaciones: { es: 'Exportaciones', en: 'Exports' },
-    campo: { es: 'Campo', en: 'Field' },
-    productos: { es: 'Productos', en: 'Products' },
-    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability' },
-    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety' },
+    empresa: { es: 'Empresa', en: 'Company', fr: 'Entreprise' },
+    certificaciones: { es: 'Certificaciones', en: 'Certifications', fr: 'Certifications' },
+    exportaciones: { es: 'Exportaciones', en: 'Exports', fr: 'Exportations' },
+    campo: { es: 'Campo', en: 'Field', fr: 'Champs' },
+    productos: { es: 'Productos', en: 'Products', fr: 'Produits' },
+    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability', fr: 'Durabilité' },
+    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety', fr: 'Qualité et sécurité alimentaire' },
   }
   return labels[cat]?.[locale] ?? cat
 }
@@ -37,6 +39,10 @@ interface Props {
 
 export function PublicacionesList({ publicaciones, locale }: Props) {
   const t = useTranslations('noticias')
+
+  // Sanity only stores ES/EN copy, so every non-Spanish locale (en, fr)
+  // renders the English version, falling back to Spanish when it's missing.
+  const useEnglishCopy = locale !== 'es'
 
   return (
     <div className="w-full min-h-screen bg-white">
@@ -64,9 +70,9 @@ export function PublicacionesList({ publicaciones, locale }: Props) {
         ) : (
           <div className="divide-y divide-gray-100">
             {publicaciones.map((pub, idx) => {
-              const titulo = (locale === 'en' && pub.tituloEn) ? pub.tituloEn : pub.tituloEs
-              const resumen = (locale === 'en' && pub.resumenEn) ? pub.resumenEn : pub.resumenEs
-              const contenido = (locale === 'en' && pub.contenidoEn?.length) ? pub.contenidoEn : pub.contenidoEs
+              const titulo = (useEnglishCopy && pub.tituloEn) ? pub.tituloEn : pub.tituloEs
+              const resumen = (useEnglishCopy && pub.resumenEn) ? pub.resumenEn : pub.resumenEs
+              const contenido = (useEnglishCopy && pub.contenidoEn?.length) ? pub.contenidoEn : pub.contenidoEs
               const tipo = pub.tipoPublicacion === 'noticia' ? t('type_noticia') : t('type_blog')
               const cat = categoryLabel(pub.categoria, locale)
               const fecha = formatDate(pub.fechaPublicacion, locale)

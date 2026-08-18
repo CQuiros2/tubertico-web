@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
+import { localeUrl } from '@/lib/alternates';
 import { siteConfig } from '@/lib/siteConfig';
 
-const routes = ['', '/productos', '/galeria', '/contacto', '/privacidad'];
+// '/news' resolves to the locale-specific segment (/noticias, /news, /actualites).
+const routes = ['', '/productos', '/galeria', '/news', '/contacto', '/privacidad'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -9,11 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of siteConfig.locales) {
     for (const route of routes) {
       entries.push({
-        url: `${siteConfig.url}/${locale}${route}`,
+        url: localeUrl(locale, route),
         lastModified: new Date(),
         alternates: {
           languages: Object.fromEntries(
-            siteConfig.locales.map((l) => [l, `${siteConfig.url}/${l}${route}`])
+            siteConfig.locales.map((l) => [l, localeUrl(l, route)])
           ),
         },
       });

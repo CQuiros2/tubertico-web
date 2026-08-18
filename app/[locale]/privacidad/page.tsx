@@ -1,36 +1,56 @@
 import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { localeAlternates } from '@/lib/alternates';
 
 interface PageProps {
   params: { locale: string };
 }
 
+const titles: Record<string, string> = {
+  es: 'Política de Privacidad',
+  en: 'Privacy Policy',
+  fr: 'Politique de confidentialité',
+};
+
+const descriptions: Record<string, string> = {
+  es: 'Política de privacidad de Tubertico — Tubérculos Ticos S.R.L.',
+  en: 'Privacy policy of Tubertico — Tubérculos Ticos S.R.L.',
+  fr: 'Politique de confidentialité de Tubertico — Tubérculos Ticos S.R.L.',
+};
+
+const eyebrows: Record<string, string> = { es: 'Legal', en: 'Legal', fr: 'Mentions légales' };
+
+const updated: Record<string, string> = {
+  es: 'Última actualización: abril de 2026',
+  en: 'Last updated: April 2026',
+  fr: 'Dernière mise à jour : avril 2026',
+};
+
 export async function generateMetadata({ params: { locale } }: PageProps): Promise<Metadata> {
   return {
-    title: locale === 'es' ? 'Política de Privacidad' : 'Privacy Policy',
-    description:
-      locale === 'es'
-        ? 'Política de privacidad de Tubertico — Tubérculos Ticos S.R.L.'
-        : 'Privacy policy of Tubertico — Tubérculos Ticos S.R.L.',
+    title: titles[locale] ?? titles.en,
+    description: descriptions[locale] ?? descriptions.en,
+    alternates: localeAlternates(locale, '/privacidad'),
   };
 }
 
 export default function PrivacidadPage({ params: { locale } }: PageProps) {
   setRequestLocale(locale);
   const es = locale === 'es';
+  const fr = locale === 'fr';
 
   return (
     <div className="pt-24 pb-24 bg-white min-h-screen">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-orange mb-4">
-          {es ? 'Legal' : 'Legal'}
+          {eyebrows[locale] ?? eyebrows.en}
         </p>
         <h1 className="font-display font-bold text-brand-green-dark text-3xl md:text-4xl leading-tight tracking-tight mb-3">
-          {es ? 'Política de Privacidad' : 'Privacy Policy'}
+          {titles[locale] ?? titles.en}
         </h1>
         <p className="text-gray-400 text-sm mb-12">
-          {es ? 'Última actualización: abril de 2026' : 'Last updated: April 2026'}
+          {updated[locale] ?? updated.en}
         </p>
 
         <div className="prose prose-gray max-w-none prose-headings:font-display prose-headings:text-brand-green-dark prose-a:text-brand-green">
@@ -101,6 +121,75 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
               <p>
                 Para cualquier consulta relacionada con esta política, puede escribirnos a{' '}
                 <a href="mailto:info@tubertico.com">info@tubertico.com</a> o llamarnos al +506 8973-2830.
+              </p>
+            </>
+          ) : fr ? (
+            <>
+              <p>
+                Tubérculos Ticos S.R.L. (<strong>Tubertico</strong>), dont le siège se situe à Roxana, Pococí, Limón,
+                Costa Rica, est responsable du traitement des données personnelles recueillies via ce site web
+                (<strong>tubertico.com</strong>). La présente politique décrit les données que nous collectons, la
+                manière dont nous les utilisons et les droits dont vous disposez.
+              </p>
+
+              <h2>1. Données que nous collectons</h2>
+              <p>
+                Nous ne recueillons que les données que vous nous fournissez volontairement via le formulaire de
+                contact : nom, entreprise, adresse e-mail et contenu de votre message. Nous ne collectons ni données
+                sensibles ni données concernant des mineurs.
+              </p>
+
+              <h2>2. Finalité du traitement</h2>
+              <p>
+                Les données sont utilisées exclusivement pour répondre à votre demande commerciale ou d'exportation et
+                pour gérer la relation précontractuelle ou contractuelle avec vous. Nous ne les utilisons pas à des
+                fins de marketing sans votre consentement exprès.
+              </p>
+
+              <h2>3. Base légale</h2>
+              <p>
+                Le traitement repose sur votre consentement lors de l'envoi du formulaire et, le cas échéant, sur
+                l'exécution d'un contrat ou sur l'intérêt légitime de Tubertico à traiter les demandes commerciales.
+              </p>
+
+              <h2>4. Conservation des données</h2>
+              <p>
+                Vos données sont conservées le temps nécessaire au traitement de votre demande et, en cas de relation
+                commerciale, pendant la durée exigée par la législation fiscale et commerciale applicable.
+              </p>
+
+              <h2>5. Tiers et transferts internationaux</h2>
+              <p>
+                Nous ne vendons ni ne cédons vos données à des tiers. Les données peuvent être traitées par des
+                prestataires de services de messagerie ou d'hébergement web agissant en qualité de sous-traitants dans
+                le cadre d'accords de confidentialité. Tubertico opère principalement depuis le Costa Rica ; tout
+                transfert international est effectué avec les garanties appropriées.
+              </p>
+
+              <h2>6. Vos droits</h2>
+              <p>
+                Vous disposez du droit d'accéder à vos données, de les rectifier, de les effacer et de vous opposer à
+                leur traitement, ainsi que d'en demander la limitation ou la portabilité. Pour exercer ces droits,
+                contactez-nous à l'adresse{' '}
+                <a href="mailto:info@tubertico.com">info@tubertico.com</a>.
+              </p>
+
+              <h2>7. Cookies</h2>
+              <p>
+                Ce site peut utiliser des cookies techniques essentiels à son fonctionnement. Aucun cookie de suivi ou
+                de publicité n'est utilisé sans votre consentement.
+              </p>
+
+              <h2>8. Modifications</h2>
+              <p>
+                Tubertico se réserve le droit de mettre à jour la présente politique. La version en vigueur sera
+                toujours disponible sur cette page.
+              </p>
+
+              <h2>9. Contact</h2>
+              <p>
+                Pour toute question relative à cette politique, vous pouvez nous écrire à{' '}
+                <a href="mailto:info@tubertico.com">info@tubertico.com</a> ou nous appeler au +506 8973-2830.
               </p>
             </>
           ) : (
