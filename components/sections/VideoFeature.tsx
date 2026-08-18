@@ -27,7 +27,7 @@ export function VideoFeature({ locale }: VideoFeatureProps) {
     `?autoplay=1&rel=0&modestbranding=1&hl=${locale}`;
 
   return (
-    <SectionWrapper className="bg-brand-green-dark text-white">
+    <SectionWrapper id="video" dark>
       <AnimatedSection className="text-center mb-10 md:mb-12">
         <p className="eyebrow text-brand-orange mb-4">{t('eyebrow')}</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">

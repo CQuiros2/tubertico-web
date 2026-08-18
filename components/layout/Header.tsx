@@ -82,7 +82,7 @@ export function Header({ locale }: HeaderProps) {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 md:h-[72px] items-center justify-between gap-8">
+          <div className="flex h-16 lg:h-[72px] items-center justify-between gap-8">
 
             {/* Logo */}
             <Link
@@ -93,7 +93,7 @@ export function Header({ locale }: HeaderProps) {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-0.5">
+            <nav className="hidden lg:flex items-center gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -117,7 +117,7 @@ export function Header({ locale }: HeaderProps) {
             </nav>
 
             {/* Right: lang switcher + CTA */}
-            <div className="hidden md:flex items-center gap-3 shrink-0">
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
               <LangSwitcher locale={locale} />
               <Link
                 href={`/${locale}/contacto`}
@@ -129,7 +129,7 @@ export function Header({ locale }: HeaderProps) {
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex items-center justify-center w-10 h-10 text-white rounded-lg hover:bg-white/10 transition-colors"
+              className="lg:hidden flex items-center justify-center w-10 h-10 text-white rounded-lg hover:bg-white/10 transition-colors"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
