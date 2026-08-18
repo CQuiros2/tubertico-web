@@ -18,7 +18,9 @@ const descriptions: Record<string, string> = {
   fr: 'Politique de confidentialité de Tubertico — Tubérculos Ticos S.R.L.',
 };
 
-const eyebrows: Record<string, string> = { es: 'Legal', en: 'Legal', fr: 'Mentions légales' };
+// Not "Mentions légales": in France that is a separate, legally distinct
+// document, so using it as the label for the privacy policy misleads.
+const eyebrows: Record<string, string> = { es: 'Legal', en: 'Legal', fr: 'Confidentialité' };
 
 const updated: Record<string, string> = {
   es: 'Última actualización: abril de 2026',
@@ -135,7 +137,7 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
               <h2>1. Données que nous collectons</h2>
               <p>
                 Nous ne recueillons que les données que vous nous fournissez volontairement via le formulaire de
-                contact : nom, entreprise, adresse e-mail et contenu de votre message. Nous ne collectons ni données
+                contact : nom, entreprise, adresse e-mail et contenu de votre message. Nous ne collectons ni données
                 sensibles ni données concernant des mineurs.
               </p>
 
@@ -162,7 +164,7 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
               <p>
                 Nous ne vendons ni ne cédons vos données à des tiers. Les données peuvent être traitées par des
                 prestataires de services de messagerie ou d'hébergement web agissant en qualité de sous-traitants dans
-                le cadre d'accords de confidentialité. Tubertico opère principalement depuis le Costa Rica ; tout
+                le cadre d'accords de confidentialité. Tubertico opère principalement depuis le Costa Rica ; tout
                 transfert international est effectué avec les garanties appropriées.
               </p>
 

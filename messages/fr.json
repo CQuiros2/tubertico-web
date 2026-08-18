@@ -32,8 +32,8 @@
     "closing_cta_whatsapp": "Écrire sur WhatsApp",
     "items": {
       "ayote": { "name": "Ayote (Squash)", "description": "Légume d'excellente qualité, cultivé selon les normes internationales de sécurité alimentaire." },
-      "chayote_blanco": { "name": "White Chayote", "description": "Chayote frais de première qualité, idéal pour les marchés internationaux." },
-      "coco_seco": { "name": "Dried Coconut", "description": "Noix de coco sèche sélectionnée, exportée sous des contrôles de qualité stricts." },
+      "chayote_blanco": { "name": "White Chayote", "description": "Chayotte fraîche de première qualité, idéale pour les marchés internationaux." },
+      "coco_seco": { "name": "Dried Coconut", "description": "Noix de coco sèche sélectionnée, soumise à des contrôles de qualité rigoureux." },
       "jengibre": { "name": "Ginger", "description": "Racine de gingembre frais, très demandée sur les marchés des États-Unis et d'Europe." },
       "malanga_blanca": { "name": "White Malanga", "description": "Tubercule à chair blanche, riche en glucides et au goût doux." },
       "malanga_lila": { "name": "Purple Malanga", "description": "Variété violette aux propriétés nutritionnelles supérieures et à forte demande internationale." },
@@ -48,24 +48,24 @@
     }
   },
   "about": {
-    "label": "À propos de nous",
+    "label": "À propos",
     "title": "Nous sommes Tubertico",
     "headline": "Plus de 20 ans à relier les producteurs du Costa Rica aux marchés du monde entier.",
     "description": "Nous sommes une entreprise costaricienne spécialisée dans la production, la sélection et l'exportation de légumes, de racines et de tubercules frais.",
-    "description2": "Nos produits répondent aux normes les plus exigeantes en matière de sécurité alimentaire, et nous disposons des certifications actives GlobalGAP et FSMA qui nous donnent accès aux marchés des États-Unis et de l'Europe.",
+    "description2": "Nos produits répondent aux normes les plus exigeantes en matière de sécurité alimentaire, et nous détenons les certifications GlobalGAP et FSMA en cours de validité, qui nous donnent accès aux marchés des États-Unis et de l'Europe.",
     "pillar_quality_title": "Qualité premium",
     "pillar_quality_desc": "Sélection rigoureuse selon les normes GlobalGAP et FSMA. Traçabilité complète, du champ jusqu'à la destination finale.",
     "pillar_origin_title": "Origine certifiée",
-    "pillar_origin_desc": "Approvisionnement direct auprès de fermes du Costa Rica, choisies pour la qualité de leurs sols et leurs conditions agroclimatiques.",
+    "pillar_origin_desc": "Approvisionnement direct auprès d'exploitations agricoles du Costa Rica, choisies pour la qualité de leurs sols et leurs conditions agroclimatiques.",
     "pillar_export_title": "Portée mondiale",
-    "pillar_export_desc": "Nous exportons vers les marchés des États-Unis et de l'Europe avec chaîne du froid, documentation sanitaire et conformité réglementaire complète."
+    "pillar_export_desc": "Nous exportons vers les marchés des États-Unis et de l'Europe avec chaîne du froid, documentation phytosanitaire et conformité réglementaire complète."
   },
   "video": {
     "eyebrow": "Étude de cas · PROCOMER",
     "title": "Croissance Verte",
-    "subtitle": "PROCOMER présente Tubertico comme un cas de réussite en croissance verte : production durable, certification internationale et exportation depuis Limón vers le monde entier.",
+    "subtitle": "PROCOMER présente Tubertico comme un cas de réussite en croissance verte : production durable, certification internationale et exportation depuis Limón vers le monde entier.",
     "play": "Lire la vidéo",
-    "credit": "Vidéo produite par PROCOMER — Promotrice du commerce extérieur du Costa Rica · Audio en espagnol, sous-titres disponibles sur YouTube"
+    "credit": "Vidéo produite par PROCOMER, l'agence costaricienne de promotion du commerce extérieur · Audio en espagnol, sous-titres disponibles sur YouTube"
   },
   "certifications": {
     "title": "Certifications internationales"
@@ -77,25 +77,25 @@
     "tab_all": "Tous",
     "tab_products": "Produits",
     "tab_company": "Entreprise",
-    "closing_note": "Vous n'avez pas trouvé le produit que vous cherchez ? Contactez-nous directement et nous vous transmettrons volontiers photos, spécifications et disponibilités.",
+    "closing_note": "Vous n'avez pas trouvé le produit que vous cherchez ? Contactez-nous directement et nous vous transmettrons volontiers photos, spécifications et disponibilités.",
     "closing_cta": "Demander des informations"
   },
   "noticias": {
     "eyebrow": "Publications",
     "title": "Actualités et blog",
-    "subtitle": "Les nouveautés de Tubertico : entreprise, champs, exportations et durabilité.",
+    "subtitle": "Les nouveautés de Tubertico : entreprise, champs, exportations et durabilité.",
     "latest_eyebrow": "Dernière publication",
     "latest_cta": "Voir les actualités et le blog",
     "type_noticia": "Actualité",
     "type_blog": "Blog",
-    "empty": "Nous publierons bientôt nos nouveautés."
+    "empty": "De nouvelles publications arriveront bientôt."
   },
   "contact": {
     "label": "Contact",
     "headline": "Parlons exportation.",
-    "title": "Prêt à exporter avec nous ?",
+    "title": "Prêt à exporter avec nous ?",
     "subtitle": "Contactez-nous pour découvrir nos produits, nos prix et nos conditions d'exportation.",
-    "cta": "Contacter maintenant",
+    "cta": "Contactez-nous",
     "whatsapp": "Écrire sur WhatsApp",
     "contact_name_label": "Contact",
     "email_label": "E-mail",

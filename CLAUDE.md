@@ -40,6 +40,28 @@ exportada como sitio estático.
 - Cuando un contenido esté en un idioma distinto al de la página (p. ej. el
   vídeo de PROCOMER, en español), indícalo en la copia de EN/FR.
 
+### Francés — cuidado especial
+
+Nadie del equipo habla francés, así que los errores no se detectan al leerlos.
+Reglas aprendidas corrigiendo la primera versión:
+
+- **Tipografía**: `: ; ? !` llevan espacio **antes**, y debe ser inseparable
+  (` `), o el signo se queda solo al empezar la línea en móvil.
+- **Nombres propios no se traducen.** PROCOMER es «Promotora del Comercio
+  Exterior de Costa Rica»; en francés se glosa («l'agence costaricienne de
+  promotion du commerce extérieur»), no se traduce el nombre.
+- **`Mentions légales` ≠ `Politique de confidentialité`.** En Francia son dos
+  documentos legalmente distintos; no uses el primero para etiquetar el segundo.
+- **Términos de comercio**: `documentation phytosanitaire` (no `sanitaire`),
+  `exploitations agricoles` (no `fermes`, que suena a granja pequeña),
+  `certifications en cours de validité` (no `certifications actives`).
+- **Evita calcos del inglés**: `À propos` (no `À propos de nous`);
+  `Contactez-nous` (no `Contacter maintenant` — `contacter` es transitivo y
+  pide objeto).
+- Los nombres de producto van en inglés, pero si la **descripción** menciona el
+  producto, usa la palabra francesa y concuerda el género (`Chayotte fraîche`,
+  femenino; no `Chayote frais`).
+
 ---
 
 ## Convenciones de código
