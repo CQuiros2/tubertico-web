@@ -65,10 +65,17 @@ aplicables a cualquier idioma que se añada:
   producto, usa la palabra del idioma y concuerda el género (`Chayotte fraîche`,
   femenino; no `Chayote frais`).
 
-En neerlandés no hay reglas tipográficas especiales, pero sí ojo con los
-compuestos, que se escriben unidos o con guion (`GlobalGAP- en FSMA-normen`,
-`exportproducten`), y con el registro de usted (`u`), que es el que usa el
-resto del sitio.
+En neerlandés no hay reglas tipográficas especiales, pero sí:
+
+- **`wortel` significa «zanahoria»** en el uso corriente. Para «raíces» como
+  categoría de producto va `wortelgewassen`; si no, la web dice que exportamos
+  «verduras, zanahorias y tubérculos» y una ficha titulada *White Taro* acaba
+  descrita como una zanahoria. Se coló en la primera versión.
+- Compuestos unidos o con guion: `GlobalGAP- en FSMA-normen`, `exportproducten`.
+- Registro de usted (`u`), que es el que usa el resto del sitio.
+- Sin mayúscula en cada palabra del titular: `Groene groei`, no `Groene Groei`.
+- Cuidado con los calcos del español en las preposiciones: `geselecteerd
+  vanwege` (no `geselecteerd om`, calco de «seleccionados por»).
 
 ---
 

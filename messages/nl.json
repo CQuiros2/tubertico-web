@@ -9,21 +9,21 @@
   },
   "hero": {
     "tagline": "Kwaliteit waarop u kunt vertrouwen",
-    "subtitle": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van groenten, wortels en knollen naar de internationale markt.",
+    "subtitle": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van groenten, wortelgewassen en knollen naar de internationale markt.",
     "cta_products": "Bekijk producten",
     "cta_contact": "Neem contact op",
     "scroll": "Ontdekken"
   },
   "stats": {
     "years": "Jaar ervaring",
-    "hectares": "Hectare in cultuur",
+    "hectares": "Hectaren in productie",
     "projection": "Prognose 2025",
     "products": "Exportproducten",
     "certs": "Certificeringen"
   },
   "products": {
     "title": "Onze producten",
-    "subtitle": "Wortels, knollen en groenten geselecteerd volgens de hoogste normen voor kwaliteit en voedselveiligheid.",
+    "subtitle": "Wortelgewassen, knollen en groenten geselecteerd volgens de hoogste normen voor kwaliteit en voedselveiligheid.",
     "cta": "Bekijk alle producten",
     "closing_note": "Dit is een selectie van onze producten. Daarnaast leveren wij vele andere variëteiten en verpakkingen, afgestemd op de wensen van elke klant.",
     "eyebrow_export": "Export",
@@ -39,7 +39,7 @@
       "malanga_lila": { "name": "Purple Malanga", "description": "Paarse variëteit met superieure voedingswaarde en grote internationale vraag." },
       "name_amarillo": { "name": "Yellow Yam", "description": "Yamvariëteit met geel vruchtvlees, gewaardeerd op de Amerikaanse en Europese markten." },
       "name": { "name": "Yam", "description": "Traditionele Costa Ricaanse knol, sterk gevraagd binnen de Latijns-Amerikaanse diaspora." },
-      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Wortel met romige textuur, veel gebruikt in internationale keukens." },
+      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Wortelgewas met romige textuur, veel gebruikt in internationale keukens." },
       "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Paarse tarovariëteit met hoge voedingswaarde." },
       "yuca": { "name": "Cassava (Yuca)", "description": "Verse cassave van hoge kwaliteit, een van de meest geëxporteerde producten van de regio." },
       "zanahoria": { "name": "Carrot", "description": "Verse wortelen, geteeld volgens GlobalGAP- en FDA-normen." },
@@ -51,18 +51,18 @@
     "label": "Over ons",
     "title": "Wij zijn Tubertico",
     "headline": "Al ruim 20 jaar verbinden wij producenten uit Costa Rica met markten over de hele wereld.",
-    "description": "Wij zijn een Costa Ricaanse onderneming gespecialiseerd in de productie, selectie en export van verse groenten, wortels en knollen.",
+    "description": "Wij zijn een Costa Ricaanse onderneming gespecialiseerd in de productie, selectie en export van verse groenten, wortelgewassen en knollen.",
     "description2": "Onze producten voldoen aan de strengste normen voor voedselveiligheid en wij beschikken over geldige GlobalGAP- en FSMA-certificeringen, die ons toegang geven tot de markten van de Verenigde Staten en Europa.",
     "pillar_quality_title": "Premium kwaliteit",
     "pillar_quality_desc": "Strenge selectie volgens GlobalGAP- en FSMA-normen. Volledige traceerbaarheid van het veld tot de eindbestemming.",
     "pillar_origin_title": "Gecertificeerde herkomst",
-    "pillar_origin_desc": "Rechtstreekse inkoop bij landbouwbedrijven in Costa Rica, geselecteerd om de kwaliteit van hun bodem en hun agroklimatologische omstandigheden.",
+    "pillar_origin_desc": "Rechtstreekse inkoop bij landbouwbedrijven in Costa Rica, geselecteerd vanwege de kwaliteit van hun bodem en hun agroklimatologische omstandigheden.",
     "pillar_export_title": "Wereldwijd bereik",
     "pillar_export_desc": "Wij exporteren naar markten in de Verenigde Staten en Europa met koelketen, fytosanitaire documentatie en volledige naleving van de regelgeving."
   },
   "video": {
     "eyebrow": "Succesverhaal · PROCOMER",
-    "title": "Groene Groei",
+    "title": "Groene groei",
     "subtitle": "PROCOMER portretteert Tubertico als succesverhaal op het gebied van groene groei: duurzame productie, internationale certificering en export vanuit Limón naar de wereld.",
     "play": "Video afspelen",
     "credit": "Video geproduceerd door PROCOMER, het Costa Ricaanse agentschap voor exportbevordering · Spaans gesproken, ondertiteling beschikbaar op YouTube"
@@ -74,7 +74,7 @@
     "title": "Galerij",
     "subtitle": "Onze faciliteiten, processen en producten.",
     "cta": "Bekijk de volledige galerij",
-    "tab_all": "Alle",
+    "tab_all": "Alles",
     "tab_products": "Producten",
     "tab_company": "Bedrijf",
     "closing_note": "Niet gevonden wat u zocht? Neem rechtstreeks contact met ons op en wij sturen u graag foto's, specificaties en beschikbaarheid.",
@@ -83,7 +83,7 @@
   "noticias": {
     "eyebrow": "Publicaties",
     "title": "Nieuws en blog",
-    "subtitle": "Nieuws van Tubertico: bedrijf, veld, export en duurzaamheid.",
+    "subtitle": "Nieuws van Tubertico: bedrijf, teelt, export en duurzaamheid.",
     "latest_eyebrow": "Laatste publicatie",
     "latest_cta": "Bekijk nieuws en blog",
     "type_noticia": "Nieuws",
@@ -132,7 +132,7 @@
   "pages": {
     "home": {
       "title": "Home",
-      "description": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van verse groenten, wortels en knollen, met GlobalGAP- en FSMA-certificering."
+      "description": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van verse groenten, wortelgewassen en knollen, met GlobalGAP- en FSMA-certificering."
     },
     "products": {
       "title": "Producten",

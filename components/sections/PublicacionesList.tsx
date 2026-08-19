@@ -27,7 +27,7 @@ const categoryLabel = (cat: string, locale: string): string => {
     empresa: { es: 'Empresa', en: 'Company', fr: 'Entreprise', nl: 'Bedrijf' },
     certificaciones: { es: 'Certificaciones', en: 'Certifications', fr: 'Certifications', nl: 'Certificeringen' },
     exportaciones: { es: 'Exportaciones', en: 'Exports', fr: 'Exportations', nl: 'Export' },
-    campo: { es: 'Campo', en: 'Field', fr: 'Champs', nl: 'Veld' },
+    campo: { es: 'Campo', en: 'Field', fr: 'Champs', nl: 'Teelt' },
     productos: { es: 'Productos', en: 'Products', fr: 'Produits', nl: 'Producten' },
     sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability', fr: 'Durabilité', nl: 'Duurzaamheid' },
     'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety', fr: 'Qualité et sécurité alimentaire', nl: 'Kwaliteit en voedselveiligheid' },
