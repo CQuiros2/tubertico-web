@@ -9,6 +9,7 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 const VIDEO_ID = 'NXA-Cjw5-3k';
 const POSTER = '/images/video-procomer.jpg';
+const PRESS_PHOTO = '/images/press-elfinanciero.jpg';
 
 // El Financiero feature. The paper's own page is paywalled, so the primary
 // link goes to the PressReader edition, where the piece reads in full; the
@@ -90,15 +91,33 @@ export function VideoFeature({ locale }: VideoFeatureProps) {
           {/* Press feature — second piece of third-party recognition, kept in
               this same section so the homepage does not gain another one. */}
           <div className="mt-12 pt-10 border-t border-white/10">
-            <p className="eyebrow text-brand-orange/80 mb-3 text-center">{tp('eyebrow')}</p>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-center leading-snug mb-3 text-balance">
-              {tp('headline')}
-            </h3>
-            <p className="text-white/55 text-center leading-relaxed max-w-2xl mx-auto mb-6">
-              {tp('summary')}
-            </p>
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center">
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              {/* Photo from the article — the paper's own promo graphic is not
+                  used: it carries their logo and repeats the headline we
+                  already render in our own type. */}
+              <div className="md:col-span-2 rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10">
+                <Image
+                  src={PRESS_PHOTO}
+                  alt={tp('image_alt')}
+                  width={1200}
+                  height={899}
+                  className="w-full h-full object-cover aspect-[4/3]"
+                  sizes="(max-width: 768px) 100vw, 340px"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="md:col-span-3">
+                <p className="eyebrow text-brand-orange/80 mb-3">{tp('eyebrow')}</p>
+                <h3 className="font-display text-xl md:text-2xl font-bold leading-snug mb-3 text-balance">
+                  {tp('headline')}
+                </h3>
+                <p className="text-white/55 leading-relaxed mb-6">
+                  {tp('summary')}
+                </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
               <a
                 href={PRESS_READ_URL}
                 target="_blank"
@@ -117,9 +136,11 @@ export function VideoFeature({ locale }: VideoFeatureProps) {
                 {tp('cta_source')}
                 <ArrowUpRight size={13} />
               </a>
-            </div>
+                </div>
 
-            <p className="text-center text-white/30 text-xs mt-6">{tp('byline')}</p>
+                <p className="text-white/30 text-xs mt-6">{tp('byline')}</p>
+              </div>
+            </div>
           </div>
         </div>
       </AnimatedSection>
