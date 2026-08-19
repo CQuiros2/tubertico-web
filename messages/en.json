@@ -31,20 +31,62 @@
     "closing_cta_contact": "Contact us for more information",
     "closing_cta_whatsapp": "Message us on WhatsApp",
     "items": {
-      "ayote": { "name": "Ayote (Squash)", "description": "High-quality vegetable cultivated to international food safety standards." },
-      "chayote_blanco": { "name": "White Chayote", "description": "Fresh, first-grade chayote, ideal for international markets." },
-      "coco_seco": { "name": "Dried Coconut", "description": "Selected dried coconut exported under strict quality controls." },
-      "jengibre": { "name": "Ginger", "description": "Fresh ginger root with high demand in US and European markets." },
-      "malanga_blanca": { "name": "White Malanga", "description": "White-fleshed tuber, rich in carbohydrates with a mild flavor." },
-      "malanga_lila": { "name": "Purple Malanga", "description": "Purple variety with superior nutritional properties and high international demand." },
-      "name_amarillo": { "name": "Yellow Yam", "description": "Yellow-fleshed yam variety, valued in American and European markets." },
-      "name": { "name": "Yam", "description": "Traditional Costa Rican tuber with strong demand in the Latin American diaspora." },
-      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Creamy-textured root, widely used in international cuisines." },
-      "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Purple taro variety with high nutritional value." },
-      "yuca": { "name": "Cassava (Yuca)", "description": "High-quality fresh cassava, one of the region's top export products." },
-      "zanahoria": { "name": "Carrot", "description": "Fresh carrots grown under GlobalGAP and FDA standards." },
-      "camote": { "name": "Sweet Potato", "description": "Top-grade sweet potato with strong acceptance in the US market." },
-      "yampi": { "name": "Yampi", "description": "Tropical tuber with mild flavor and firm texture, ideal for export." }
+      "ayote": {
+        "name": "Ayote (Squash)",
+        "description": "High-quality vegetable cultivated to international food safety standards."
+      },
+      "chayote_blanco": {
+        "name": "White Chayote",
+        "description": "Fresh, first-grade chayote, ideal for international markets."
+      },
+      "coco_seco": {
+        "name": "Dried Coconut",
+        "description": "Selected dried coconut exported under strict quality controls."
+      },
+      "jengibre": {
+        "name": "Ginger",
+        "description": "Fresh ginger root with high demand in US and European markets."
+      },
+      "malanga_blanca": {
+        "name": "White Malanga",
+        "description": "White-fleshed tuber, rich in carbohydrates with a mild flavor."
+      },
+      "malanga_lila": {
+        "name": "Purple Malanga",
+        "description": "Purple variety with superior nutritional properties and high international demand."
+      },
+      "name_amarillo": {
+        "name": "Yellow Yam",
+        "description": "Yellow-fleshed yam variety, valued in American and European markets."
+      },
+      "name": {
+        "name": "Yam",
+        "description": "Traditional Costa Rican tuber with strong demand in the Latin American diaspora."
+      },
+      "yautia_blanco": {
+        "name": "White Taro / Yautia",
+        "description": "Creamy-textured root, widely used in international cuisines."
+      },
+      "yautia_lila": {
+        "name": "Purple Taro / Yautia",
+        "description": "Purple taro variety with high nutritional value."
+      },
+      "yuca": {
+        "name": "Cassava (Yuca)",
+        "description": "High-quality fresh cassava, one of the region's top export products."
+      },
+      "zanahoria": {
+        "name": "Carrot",
+        "description": "Fresh carrots grown under GlobalGAP and FDA standards."
+      },
+      "camote": {
+        "name": "Sweet Potato",
+        "description": "Top-grade sweet potato with strong acceptance in the US market."
+      },
+      "yampi": {
+        "name": "Yampi",
+        "description": "Tropical tuber with mild flavor and firm texture, ideal for export."
+      }
     }
   },
   "about": {
@@ -66,6 +108,14 @@
     "subtitle": "PROCOMER profiles Tubertico as a green growth success story: sustainable production, international certification and export from Limón to the world.",
     "play": "Play the video",
     "credit": "Video produced by PROCOMER — Costa Rican Foreign Trade Promoter · Spanish audio, subtitles available on YouTube"
+  },
+  "press": {
+    "eyebrow": "In the press · El Financiero",
+    "headline": "Tubertico: the Pococí company thriving in export markets",
+    "summary": "El Financiero profiles Tubertico's generational handover and the 250% growth in its exports.",
+    "cta_read": "Read the article",
+    "cta_source": "View on El Financiero",
+    "byline": "Carlos Cordero Pérez · 23 May 2026 · Article in Spanish"
   },
   "certifications": {
     "title": "International Certifications"

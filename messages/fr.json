@@ -31,20 +31,62 @@
     "closing_cta_contact": "Contactez-nous pour plus d'informations",
     "closing_cta_whatsapp": "Écrire sur WhatsApp",
     "items": {
-      "ayote": { "name": "Ayote (Squash)", "description": "Légume d'excellente qualité, cultivé selon les normes internationales de sécurité alimentaire." },
-      "chayote_blanco": { "name": "White Chayote", "description": "Chayotte fraîche de première qualité, idéale pour les marchés internationaux." },
-      "coco_seco": { "name": "Dried Coconut", "description": "Noix de coco sèche sélectionnée, soumise à des contrôles de qualité rigoureux." },
-      "jengibre": { "name": "Ginger", "description": "Racine de gingembre frais, très demandée sur les marchés des États-Unis et d'Europe." },
-      "malanga_blanca": { "name": "White Malanga", "description": "Tubercule à chair blanche, riche en glucides et au goût doux." },
-      "malanga_lila": { "name": "Purple Malanga", "description": "Variété violette aux propriétés nutritionnelles supérieures et à forte demande internationale." },
-      "name_amarillo": { "name": "Yellow Yam", "description": "Variété d'igname à chair jaune, appréciée sur les marchés américains et européens." },
-      "name": { "name": "Yam", "description": "Tubercule traditionnel costaricien, très demandé au sein de la diaspora latino-américaine." },
-      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Racine à la texture crémeuse, largement utilisée dans les cuisines internationales." },
-      "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Variété violette de taro à haute valeur nutritionnelle." },
-      "yuca": { "name": "Cassava (Yuca)", "description": "Manioc frais de haute qualité, l'un des produits les plus exportés de la région." },
-      "zanahoria": { "name": "Carrot", "description": "Carotte fraîche cultivée selon les normes GlobalGAP et FDA." },
-      "camote": { "name": "Sweet Potato", "description": "Patate douce de premier choix, très bien accueillie sur le marché américain." },
-      "yampi": { "name": "Yampi", "description": "Tubercule tropical au goût doux et à la texture ferme, idéal pour l'exportation." }
+      "ayote": {
+        "name": "Ayote (Squash)",
+        "description": "Légume d'excellente qualité, cultivé selon les normes internationales de sécurité alimentaire."
+      },
+      "chayote_blanco": {
+        "name": "White Chayote",
+        "description": "Chayotte fraîche de première qualité, idéale pour les marchés internationaux."
+      },
+      "coco_seco": {
+        "name": "Dried Coconut",
+        "description": "Noix de coco sèche sélectionnée, soumise à des contrôles de qualité rigoureux."
+      },
+      "jengibre": {
+        "name": "Ginger",
+        "description": "Racine de gingembre frais, très demandée sur les marchés des États-Unis et d'Europe."
+      },
+      "malanga_blanca": {
+        "name": "White Malanga",
+        "description": "Tubercule à chair blanche, riche en glucides et au goût doux."
+      },
+      "malanga_lila": {
+        "name": "Purple Malanga",
+        "description": "Variété violette aux propriétés nutritionnelles supérieures et à forte demande internationale."
+      },
+      "name_amarillo": {
+        "name": "Yellow Yam",
+        "description": "Variété d'igname à chair jaune, appréciée sur les marchés américains et européens."
+      },
+      "name": {
+        "name": "Yam",
+        "description": "Tubercule traditionnel costaricien, très demandé au sein de la diaspora latino-américaine."
+      },
+      "yautia_blanco": {
+        "name": "White Taro / Yautia",
+        "description": "Racine à la texture crémeuse, largement utilisée dans les cuisines internationales."
+      },
+      "yautia_lila": {
+        "name": "Purple Taro / Yautia",
+        "description": "Variété violette de taro à haute valeur nutritionnelle."
+      },
+      "yuca": {
+        "name": "Cassava (Yuca)",
+        "description": "Manioc frais de haute qualité, l'un des produits les plus exportés de la région."
+      },
+      "zanahoria": {
+        "name": "Carrot",
+        "description": "Carotte fraîche cultivée selon les normes GlobalGAP et FDA."
+      },
+      "camote": {
+        "name": "Sweet Potato",
+        "description": "Patate douce de premier choix, très bien accueillie sur le marché américain."
+      },
+      "yampi": {
+        "name": "Yampi",
+        "description": "Tubercule tropical au goût doux et à la texture ferme, idéal pour l'exportation."
+      }
     }
   },
   "about": {
@@ -66,6 +108,14 @@
     "subtitle": "PROCOMER présente Tubertico comme un cas de réussite en croissance verte : production durable, certification internationale et exportation depuis Limón vers le monde entier.",
     "play": "Lire la vidéo",
     "credit": "Vidéo produite par PROCOMER, l'agence costaricienne de promotion du commerce extérieur · Audio en espagnol, sous-titres disponibles sur YouTube"
+  },
+  "press": {
+    "eyebrow": "Dans la presse · El Financiero",
+    "headline": "Tubertico : l'entreprise de Pococí qui réussit à l'export",
+    "summary": "El Financiero consacre un reportage à la transmission générationnelle de Tubertico et à la croissance de 250 % de ses exportations.",
+    "cta_read": "Lire le reportage",
+    "cta_source": "Voir sur El Financiero",
+    "byline": "Carlos Cordero Pérez · 23 mai 2026 · Article en espagnol"
   },
   "certifications": {
     "title": "Certifications internationales"

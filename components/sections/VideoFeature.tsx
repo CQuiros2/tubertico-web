@@ -3,12 +3,20 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { Play } from 'lucide-react';
+import { ArrowUpRight, Play } from 'lucide-react';
 import { SectionWrapper } from '@/components/ui/SectionWrapper';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 
 const VIDEO_ID = 'NXA-Cjw5-3k';
 const POSTER = '/images/video-procomer.jpg';
+
+// El Financiero feature. The paper's own page is paywalled, so the primary
+// link goes to the PressReader edition, where the piece reads in full; the
+// original stays reachable as the source of record.
+const PRESS_READ_URL =
+  'https://www.pressreader.com/costa-rica/el-financiero-costa-rica/20260523/281968909338185';
+const PRESS_SOURCE_URL =
+  'https://www.elfinancierocr.com/emprender/heredo-la-empresa-agricola-de-la-familia-y-de/JBGZA6OLKFDRTOLC5XGXGUSY4Y/story/';
 
 interface VideoFeatureProps {
   locale: string;
@@ -16,6 +24,7 @@ interface VideoFeatureProps {
 
 export function VideoFeature({ locale }: VideoFeatureProps) {
   const t = useTranslations('video');
+  const tp = useTranslations('press');
   const [playing, setPlaying] = useState(false);
 
   // Facade pattern: the poster is a local image and the YouTube player is
@@ -75,8 +84,43 @@ export function VideoFeature({ locale }: VideoFeatureProps) {
             )}
           </div>
 
-          {/* Attribution — also flags the audio language for EN/FR visitors */}
+          {/* Attribution — also flags the audio language for non-Spanish visitors */}
           <p className="text-center text-white/35 text-xs mt-5">{t('credit')}</p>
+
+          {/* Press feature — second piece of third-party recognition, kept in
+              this same section so the homepage does not gain another one. */}
+          <div className="mt-12 pt-10 border-t border-white/10">
+            <p className="eyebrow text-brand-orange/80 mb-3 text-center">{tp('eyebrow')}</p>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-center leading-snug mb-3 text-balance">
+              {tp('headline')}
+            </h3>
+            <p className="text-white/55 text-center leading-relaxed max-w-2xl mx-auto mb-6">
+              {tp('summary')}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={PRESS_READ_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-orange hover:bg-brand-orange-light text-white text-sm font-semibold px-6 py-3 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-px"
+              >
+                {tp('cta_read')}
+                <ArrowUpRight size={15} />
+              </a>
+              <a
+                href={PRESS_SOURCE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-white/50 hover:text-white/80 text-sm transition-colors underline underline-offset-4 decoration-white/25"
+              >
+                {tp('cta_source')}
+                <ArrowUpRight size={13} />
+              </a>
+            </div>
+
+            <p className="text-center text-white/30 text-xs mt-6">{tp('byline')}</p>
+          </div>
         </div>
       </AnimatedSection>
     </SectionWrapper>

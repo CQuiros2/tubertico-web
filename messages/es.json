@@ -31,20 +31,62 @@
     "closing_cta_contact": "Contáctenos para más información",
     "closing_cta_whatsapp": "Escribir por WhatsApp",
     "items": {
-      "ayote": { "name": "Ayote", "description": "Hortaliza de excelente calidad, cultivada con estándares internacionales de inocuidad." },
-      "chayote_blanco": { "name": "Chayote Blanco", "description": "Chayote fresco de primera calidad, ideal para mercados internacionales." },
-      "coco_seco": { "name": "Coco Seco", "description": "Coco seco seleccionado, exportado bajo estrictos controles de calidad." },
-      "jengibre": { "name": "Jengibre", "description": "Raíz de jengibre fresco con alta demanda en mercados de EE.UU. y Europa." },
-      "malanga_blanca": { "name": "Malanga Blanca", "description": "Tubérculo de pulpa blanca, rico en carbohidratos y de sabor suave." },
-      "malanga_lila": { "name": "Malanga Lila", "description": "Variedad morada con propiedades nutricionales superiores y alta demanda internacional." },
-      "name_amarillo": { "name": "Ñame Amarillo", "description": "Variedad de ñame de pulpa amarilla, apreciada en mercados americanos y europeos." },
-      "name": { "name": "Ñame", "description": "Tubérculo tradicional costarricense con fuerte demanda en la diáspora latinoamericana." },
-      "yautia_blanco": { "name": "Tiquisque Blanco / Yautia", "description": "Raíz de textura cremosa, ampliamente utilizada en cocinas internacionales." },
-      "yautia_lila": { "name": "Tiquisque Lila / Yautia", "description": "Variedad morada de tiquisque con alto valor nutricional." },
-      "yuca": { "name": "Yuca", "description": "Yuca fresca de alta calidad, uno de los productos de mayor exportación de la región." },
-      "zanahoria": { "name": "Zanahoria", "description": "Zanahoria fresca cultivada con GlobalGAP y estándares FDA." },
-      "camote": { "name": "Camote", "description": "Camote dulce de primera selección, con gran aceptación en el mercado estadounidense." },
-      "yampi": { "name": "Yampi", "description": "Tubérculo tropical de sabor suave y textura firme, ideal para exportación." }
+      "ayote": {
+        "name": "Ayote",
+        "description": "Hortaliza de excelente calidad, cultivada con estándares internacionales de inocuidad."
+      },
+      "chayote_blanco": {
+        "name": "Chayote Blanco",
+        "description": "Chayote fresco de primera calidad, ideal para mercados internacionales."
+      },
+      "coco_seco": {
+        "name": "Coco Seco",
+        "description": "Coco seco seleccionado, exportado bajo estrictos controles de calidad."
+      },
+      "jengibre": {
+        "name": "Jengibre",
+        "description": "Raíz de jengibre fresco con alta demanda en mercados de EE.UU. y Europa."
+      },
+      "malanga_blanca": {
+        "name": "Malanga Blanca",
+        "description": "Tubérculo de pulpa blanca, rico en carbohidratos y de sabor suave."
+      },
+      "malanga_lila": {
+        "name": "Malanga Lila",
+        "description": "Variedad morada con propiedades nutricionales superiores y alta demanda internacional."
+      },
+      "name_amarillo": {
+        "name": "Ñame Amarillo",
+        "description": "Variedad de ñame de pulpa amarilla, apreciada en mercados americanos y europeos."
+      },
+      "name": {
+        "name": "Ñame",
+        "description": "Tubérculo tradicional costarricense con fuerte demanda en la diáspora latinoamericana."
+      },
+      "yautia_blanco": {
+        "name": "Tiquisque Blanco / Yautia",
+        "description": "Raíz de textura cremosa, ampliamente utilizada en cocinas internacionales."
+      },
+      "yautia_lila": {
+        "name": "Tiquisque Lila / Yautia",
+        "description": "Variedad morada de tiquisque con alto valor nutricional."
+      },
+      "yuca": {
+        "name": "Yuca",
+        "description": "Yuca fresca de alta calidad, uno de los productos de mayor exportación de la región."
+      },
+      "zanahoria": {
+        "name": "Zanahoria",
+        "description": "Zanahoria fresca cultivada con GlobalGAP y estándares FDA."
+      },
+      "camote": {
+        "name": "Camote",
+        "description": "Camote dulce de primera selección, con gran aceptación en el mercado estadounidense."
+      },
+      "yampi": {
+        "name": "Yampi",
+        "description": "Tubérculo tropical de sabor suave y textura firme, ideal para exportación."
+      }
     }
   },
   "about": {
@@ -66,6 +108,14 @@
     "subtitle": "PROCOMER retrata a Tubertico como caso de éxito en crecimiento verde: producción sostenible, certificación internacional y exportación desde Limón al mundo.",
     "play": "Reproducir el vídeo",
     "credit": "Vídeo producido por PROCOMER — Promotora del Comercio Exterior de Costa Rica"
+  },
+  "press": {
+    "eyebrow": "En los medios · El Financiero",
+    "headline": "Tubertico: la firma de Pococí que triunfa en el mercado exterior",
+    "summary": "El Financiero dedica un reportaje al relevo generacional de Tubertico y al crecimiento del 250 % en sus exportaciones.",
+    "cta_read": "Leer el reportaje",
+    "cta_source": "Ver en El Financiero",
+    "byline": "Carlos Cordero Pérez · 23 de mayo de 2026"
   },
   "certifications": {
     "title": "Certificaciones Internacionales"

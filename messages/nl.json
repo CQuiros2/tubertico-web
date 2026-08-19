@@ -31,20 +31,62 @@
     "closing_cta_contact": "Neem contact met ons op voor meer informatie",
     "closing_cta_whatsapp": "Schrijf ons via WhatsApp",
     "items": {
-      "ayote": { "name": "Ayote (Squash)", "description": "Groente van uitstekende kwaliteit, geteeld volgens internationale normen voor voedselveiligheid." },
-      "chayote_blanco": { "name": "White Chayote", "description": "Verse chayote van eerste kwaliteit, ideaal voor internationale markten." },
-      "coco_seco": { "name": "Dried Coconut", "description": "Geselecteerde gedroogde kokosnoot, onderworpen aan strenge kwaliteitscontroles." },
-      "jengibre": { "name": "Ginger", "description": "Verse gemberwortel, sterk gevraagd op de markten van de Verenigde Staten en Europa." },
-      "malanga_blanca": { "name": "White Malanga", "description": "Knol met wit vruchtvlees, rijk aan koolhydraten en met een milde smaak." },
-      "malanga_lila": { "name": "Purple Malanga", "description": "Paarse variëteit met superieure voedingswaarde en grote internationale vraag." },
-      "name_amarillo": { "name": "Yellow Yam", "description": "Yamvariëteit met geel vruchtvlees, gewaardeerd op de Amerikaanse en Europese markten." },
-      "name": { "name": "Yam", "description": "Traditionele Costa Ricaanse knol, sterk gevraagd binnen de Latijns-Amerikaanse diaspora." },
-      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Wortelgewas met romige textuur, veel gebruikt in internationale keukens." },
-      "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Paarse tarovariëteit met hoge voedingswaarde." },
-      "yuca": { "name": "Cassava (Yuca)", "description": "Verse cassave van hoge kwaliteit, een van de meest geëxporteerde producten van de regio." },
-      "zanahoria": { "name": "Carrot", "description": "Verse wortelen, geteeld volgens GlobalGAP- en FDA-normen." },
-      "camote": { "name": "Sweet Potato", "description": "Zoete aardappel van eerste keus, zeer goed ontvangen op de Amerikaanse markt." },
-      "yampi": { "name": "Yampi", "description": "Tropische knol met milde smaak en stevige textuur, ideaal voor export." }
+      "ayote": {
+        "name": "Ayote (Squash)",
+        "description": "Groente van uitstekende kwaliteit, geteeld volgens internationale normen voor voedselveiligheid."
+      },
+      "chayote_blanco": {
+        "name": "White Chayote",
+        "description": "Verse chayote van eerste kwaliteit, ideaal voor internationale markten."
+      },
+      "coco_seco": {
+        "name": "Dried Coconut",
+        "description": "Geselecteerde gedroogde kokosnoot, onderworpen aan strenge kwaliteitscontroles."
+      },
+      "jengibre": {
+        "name": "Ginger",
+        "description": "Verse gemberwortel, sterk gevraagd op de markten van de Verenigde Staten en Europa."
+      },
+      "malanga_blanca": {
+        "name": "White Malanga",
+        "description": "Knol met wit vruchtvlees, rijk aan koolhydraten en met een milde smaak."
+      },
+      "malanga_lila": {
+        "name": "Purple Malanga",
+        "description": "Paarse variëteit met superieure voedingswaarde en grote internationale vraag."
+      },
+      "name_amarillo": {
+        "name": "Yellow Yam",
+        "description": "Yamvariëteit met geel vruchtvlees, gewaardeerd op de Amerikaanse en Europese markten."
+      },
+      "name": {
+        "name": "Yam",
+        "description": "Traditionele Costa Ricaanse knol, sterk gevraagd binnen de Latijns-Amerikaanse diaspora."
+      },
+      "yautia_blanco": {
+        "name": "White Taro / Yautia",
+        "description": "Wortelgewas met romige textuur, veel gebruikt in internationale keukens."
+      },
+      "yautia_lila": {
+        "name": "Purple Taro / Yautia",
+        "description": "Paarse tarovariëteit met hoge voedingswaarde."
+      },
+      "yuca": {
+        "name": "Cassava (Yuca)",
+        "description": "Verse cassave van hoge kwaliteit, een van de meest geëxporteerde producten van de regio."
+      },
+      "zanahoria": {
+        "name": "Carrot",
+        "description": "Verse wortelen, geteeld volgens GlobalGAP- en FDA-normen."
+      },
+      "camote": {
+        "name": "Sweet Potato",
+        "description": "Zoete aardappel van eerste keus, zeer goed ontvangen op de Amerikaanse markt."
+      },
+      "yampi": {
+        "name": "Yampi",
+        "description": "Tropische knol met milde smaak en stevige textuur, ideaal voor export."
+      }
     }
   },
   "about": {
@@ -66,6 +108,14 @@
     "subtitle": "PROCOMER portretteert Tubertico als succesverhaal op het gebied van groene groei: duurzame productie, internationale certificering en export vanuit Limón naar de wereld.",
     "play": "Video afspelen",
     "credit": "Video geproduceerd door PROCOMER, het Costa Ricaanse agentschap voor exportbevordering · Spaans gesproken, ondertiteling beschikbaar op YouTube"
+  },
+  "press": {
+    "eyebrow": "In de pers · El Financiero",
+    "headline": "Tubertico: het bedrijf uit Pococí dat succes boekt op de exportmarkt",
+    "summary": "El Financiero wijdt een reportage aan de generatiewissel bij Tubertico en de groei van 250% in de export.",
+    "cta_read": "Lees het artikel",
+    "cta_source": "Bekijk op El Financiero",
+    "byline": "Carlos Cordero Pérez · 23 mei 2026 · Artikel in het Spaans"
   },
   "certifications": {
     "title": "Internationale certificeringen"
