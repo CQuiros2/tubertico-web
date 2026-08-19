@@ -1,14 +1,20 @@
-// Maps path segments that differ per locale.
-// Add any future locale-specific routes here.
-const routeMap: Record<string, Record<string, string>> = {
-  '/noticias':   { es: '/noticias', en: '/news', fr: '/actualites' },
-  '/news':       { es: '/noticias', en: '/news', fr: '/actualites' },
-  '/actualites': { es: '/noticias', en: '/news', fr: '/actualites' },
+// Path segment of the News & Blog page per locale. This is the only route
+// whose segment is translated; every other page shares the Spanish segment.
+const newsPath: Record<string, string> = {
+  es: '/noticias',
+  en: '/news',
+  fr: '/actualites',
+  nl: '/nieuws',
 }
 
-// Path segment of the News & Blog page for a given locale.
+// Any of the localized news segments maps back to the whole set, so the
+// language switcher can jump between them from whichever one you are on.
+const routeMap: Record<string, Record<string, string>> = Object.fromEntries(
+  Object.values(newsPath).map((segment) => [segment, newsPath]),
+)
+
 export function getNewsPath(locale: string): string {
-  return routeMap['/noticias'][locale] ?? '/news'
+  return newsPath[locale] ?? newsPath.en
 }
 
 export function getLocalizedHref(

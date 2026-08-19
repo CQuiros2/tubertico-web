@@ -9,10 +9,22 @@ import { motion } from 'framer-motion';
 const CLOUDINARY_VIDEO = 'https://res.cloudinary.com/dv5xfo78c/video/upload/v1734383971/web_tubertico_uxfqyl.mp4';
 
 const brandPillars = [
-  { value: { es: '+20 Años',      en: '+20 Years',    fr: '+20 ans'      }, label: { es: 'en el mercado', en: 'in the market', fr: 'sur le marché'      } },
-  { value: { es: '+17 Productos', en: '+17 Products', fr: '+17 produits' }, label: { es: 'disponibles',   en: 'available',     fr: 'disponibles'        } },
-  { value: { es: 'Calidad',       en: 'Quality',      fr: 'Qualité'      }, label: { es: 'e inocuidad',   en: '& food safety', fr: 'et sécurité alimentaire' } },
-  { value: { es: 'Exportación',   en: 'Export',       fr: 'Exportation'  }, label: { es: 'global',        en: 'global',        fr: 'mondiale'           } },
+  {
+    value: { es: '+20 Años', en: '+20 Years', fr: '+20 ans', nl: '+20 jaar' },
+    label: { es: 'en el mercado', en: 'in the market', fr: 'sur le marché', nl: 'op de markt' },
+  },
+  {
+    value: { es: '+17 Productos', en: '+17 Products', fr: '+17 produits', nl: '+17 producten' },
+    label: { es: 'disponibles', en: 'available', fr: 'disponibles', nl: 'beschikbaar' },
+  },
+  {
+    value: { es: 'Calidad', en: 'Quality', fr: 'Qualité', nl: 'Kwaliteit' },
+    label: { es: 'e inocuidad', en: '& food safety', fr: 'et sécurité alimentaire', nl: 'en voedselveiligheid' },
+  },
+  {
+    value: { es: 'Exportación', en: 'Export', fr: 'Exportation', nl: 'Export' },
+    label: { es: 'global', en: 'global', fr: 'mondiale', nl: 'wereldwijd' },
+  },
 ] as const;
 
 interface HeroVideoProps {
@@ -21,7 +33,7 @@ interface HeroVideoProps {
 
 export function HeroVideo({ locale }: HeroVideoProps) {
   const t = useTranslations('hero');
-  const lang = locale === 'en' || locale === 'fr' ? locale : 'es';
+  const lang = locale === 'en' || locale === 'fr' || locale === 'nl' ? locale : 'es';
   const [videoReady, setVideoReady] = useState(false);
 
   return (

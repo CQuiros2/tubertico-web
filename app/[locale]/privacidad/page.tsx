@@ -10,22 +10,25 @@ const titles: Record<string, string> = {
   es: 'Política de Privacidad',
   en: 'Privacy Policy',
   fr: 'Politique de confidentialité',
+  nl: 'Privacybeleid',
 };
 
 const descriptions: Record<string, string> = {
   es: 'Política de privacidad de Tubertico — Tubérculos Ticos S.R.L.',
   en: 'Privacy policy of Tubertico — Tubérculos Ticos S.R.L.',
   fr: 'Politique de confidentialité de Tubertico — Tubérculos Ticos S.R.L.',
+  nl: 'Privacybeleid van Tubertico — Tubérculos Ticos S.R.L.',
 };
 
 // Not "Mentions légales": in France that is a separate, legally distinct
 // document, so using it as the label for the privacy policy misleads.
-const eyebrows: Record<string, string> = { es: 'Legal', en: 'Legal', fr: 'Confidentialité' };
+const eyebrows: Record<string, string> = { es: 'Legal', en: 'Legal', fr: 'Confidentialité', nl: 'Privacy' };
 
 const updated: Record<string, string> = {
   es: 'Última actualización: abril de 2026',
   en: 'Last updated: April 2026',
   fr: 'Dernière mise à jour : avril 2026',
+  nl: 'Laatst bijgewerkt: april 2026',
 };
 
 export async function generateMetadata({ params: { locale } }: PageProps): Promise<Metadata> {
@@ -40,6 +43,7 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
   setRequestLocale(locale);
   const es = locale === 'es';
   const fr = locale === 'fr';
+  const nl = locale === 'nl';
 
   return (
     <div className="pt-24 pb-24 bg-white min-h-screen">
@@ -192,6 +196,76 @@ export default function PrivacidadPage({ params: { locale } }: PageProps) {
               <p>
                 Pour toute question relative à cette politique, vous pouvez nous écrire à{' '}
                 <a href="mailto:info@tubertico.com">info@tubertico.com</a> ou nous appeler au +506 8973-2830.
+              </p>
+            </>
+          ) : nl ? (
+            <>
+              <p>
+                Tubérculos Ticos S.R.L. (<strong>Tubertico</strong>), gevestigd te Roxana, Pococí, Limón, Costa Rica,
+                is verantwoordelijk voor de verwerking van de persoonsgegevens die via deze website
+                (<strong>tubertico.com</strong>) worden verzameld. Dit beleid beschrijft welke gegevens wij verzamelen,
+                hoe wij deze gebruiken en welke rechten u heeft.
+              </p>
+
+              <h2>1. Gegevens die wij verzamelen</h2>
+              <p>
+                Wij verzamelen uitsluitend de gegevens die u ons vrijwillig verstrekt via het contactformulier: naam,
+                bedrijf, e-mailadres en de inhoud van uw bericht. Wij verzamelen geen bijzondere persoonsgegevens en
+                geen gegevens van minderjarigen.
+              </p>
+
+              <h2>2. Doel van de verwerking</h2>
+              <p>
+                De gegevens worden uitsluitend gebruikt om uw commerciële of exportgerelateerde vraag te beantwoorden
+                en om de precontractuele of contractuele relatie met u te beheren. Wij gebruiken ze niet voor
+                marketingdoeleinden zonder uw uitdrukkelijke toestemming.
+              </p>
+
+              <h2>3. Rechtsgrondslag</h2>
+              <p>
+                De verwerking berust op uw toestemming bij het verzenden van het formulier en, waar van toepassing, op
+                de uitvoering van een overeenkomst of op het gerechtvaardigd belang van Tubertico om zakelijke vragen
+                te behandelen.
+              </p>
+
+              <h2>4. Bewaartermijn</h2>
+              <p>
+                Uw gegevens worden bewaard zolang dat nodig is om uw verzoek te behandelen en, in geval van een
+                handelsrelatie, gedurende de termijn die de toepasselijke fiscale en handelswetgeving voorschrijft.
+              </p>
+
+              <h2>5. Derden en internationale doorgifte</h2>
+              <p>
+                Wij verkopen uw gegevens niet en geven ze niet door aan derden. De gegevens kunnen worden verwerkt door
+                leveranciers van e-mail- of webhostingdiensten die als verwerker optreden op basis van
+                geheimhoudingsovereenkomsten. Tubertico opereert hoofdzakelijk vanuit Costa Rica; elke internationale
+                doorgifte vindt plaats met passende waarborgen.
+              </p>
+
+              <h2>6. Uw rechten</h2>
+              <p>
+                U heeft het recht op inzage, rectificatie en wissing van uw gegevens en het recht bezwaar te maken
+                tegen de verwerking ervan, evenals het recht om beperking of overdraagbaarheid te verzoeken. Om deze
+                rechten uit te oefenen kunt u contact met ons opnemen via{' '}
+                <a href="mailto:info@tubertico.com">info@tubertico.com</a>.
+              </p>
+
+              <h2>7. Cookies</h2>
+              <p>
+                Deze site kan technisch noodzakelijke cookies gebruiken voor haar werking. Er worden geen tracking- of
+                advertentiecookies gebruikt zonder uw toestemming.
+              </p>
+
+              <h2>8. Wijzigingen</h2>
+              <p>
+                Tubertico behoudt zich het recht voor dit beleid bij te werken. De geldende versie is altijd op deze
+                pagina beschikbaar.
+              </p>
+
+              <h2>9. Contact</h2>
+              <p>
+                Voor vragen over dit beleid kunt u ons schrijven op{' '}
+                <a href="mailto:info@tubertico.com">info@tubertico.com</a> of bellen naar +506 8973-2830.
               </p>
             </>
           ) : (

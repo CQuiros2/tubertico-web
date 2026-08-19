@@ -2,11 +2,11 @@ export const siteConfig = {
   name: 'Tubertico',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://tubertico.com',
   defaultLocale: 'es',
-  locales: ['es', 'en', 'fr'] as const,
+  locales: ['es', 'en', 'fr', 'nl'] as const,
 
   // Endonyms — used as the accessible name of the language switcher links,
   // so a screen reader announces "Français" instead of spelling out "FR".
-  localeNames: { es: 'Español', en: 'English', fr: 'Français' } as Record<string, string>,
+  localeNames: { es: 'Español', en: 'English', fr: 'Français', nl: 'Nederlands' } as Record<string, string>,
 
   contact: {
     contactName: 'Pablo Quirós',

@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Producten",
+    "gallery": "Galerij",
+    "news": "Nieuws",
+    "contact": "Contact",
+    "cta": "Neem contact op"
+  },
+  "hero": {
+    "tagline": "Kwaliteit waarop u kunt vertrouwen",
+    "subtitle": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van groenten, wortels en knollen naar de internationale markt.",
+    "cta_products": "Bekijk producten",
+    "cta_contact": "Neem contact op",
+    "scroll": "Ontdekken"
+  },
+  "stats": {
+    "years": "Jaar ervaring",
+    "hectares": "Hectare in cultuur",
+    "projection": "Prognose 2025",
+    "products": "Exportproducten",
+    "certs": "Certificeringen"
+  },
+  "products": {
+    "title": "Onze producten",
+    "subtitle": "Wortels, knollen en groenten geselecteerd volgens de hoogste normen voor kwaliteit en voedselveiligheid.",
+    "cta": "Bekijk alle producten",
+    "closing_note": "Dit is een selectie van onze producten. Daarnaast leveren wij vele andere variëteiten en verpakkingen, afgestemd op de wensen van elke klant.",
+    "eyebrow_export": "Export",
+    "eyebrow_catalog": "Catalogus",
+    "closing_cta_contact": "Neem contact met ons op voor meer informatie",
+    "closing_cta_whatsapp": "Schrijf ons via WhatsApp",
+    "items": {
+      "ayote": { "name": "Ayote (Squash)", "description": "Groente van uitstekende kwaliteit, geteeld volgens internationale normen voor voedselveiligheid." },
+      "chayote_blanco": { "name": "White Chayote", "description": "Verse chayote van eerste kwaliteit, ideaal voor internationale markten." },
+      "coco_seco": { "name": "Dried Coconut", "description": "Geselecteerde gedroogde kokosnoot, onderworpen aan strenge kwaliteitscontroles." },
+      "jengibre": { "name": "Ginger", "description": "Verse gemberwortel, sterk gevraagd op de markten van de Verenigde Staten en Europa." },
+      "malanga_blanca": { "name": "White Malanga", "description": "Knol met wit vruchtvlees, rijk aan koolhydraten en met een milde smaak." },
+      "malanga_lila": { "name": "Purple Malanga", "description": "Paarse variëteit met superieure voedingswaarde en grote internationale vraag." },
+      "name_amarillo": { "name": "Yellow Yam", "description": "Yamvariëteit met geel vruchtvlees, gewaardeerd op de Amerikaanse en Europese markten." },
+      "name": { "name": "Yam", "description": "Traditionele Costa Ricaanse knol, sterk gevraagd binnen de Latijns-Amerikaanse diaspora." },
+      "yautia_blanco": { "name": "White Taro / Yautia", "description": "Wortel met romige textuur, veel gebruikt in internationale keukens." },
+      "yautia_lila": { "name": "Purple Taro / Yautia", "description": "Paarse tarovariëteit met hoge voedingswaarde." },
+      "yuca": { "name": "Cassava (Yuca)", "description": "Verse cassave van hoge kwaliteit, een van de meest geëxporteerde producten van de regio." },
+      "zanahoria": { "name": "Carrot", "description": "Verse wortelen, geteeld volgens GlobalGAP- en FDA-normen." },
+      "camote": { "name": "Sweet Potato", "description": "Zoete aardappel van eerste keus, zeer goed ontvangen op de Amerikaanse markt." },
+      "yampi": { "name": "Yampi", "description": "Tropische knol met milde smaak en stevige textuur, ideaal voor export." }
+    }
+  },
+  "about": {
+    "label": "Over ons",
+    "title": "Wij zijn Tubertico",
+    "headline": "Al ruim 20 jaar verbinden wij producenten uit Costa Rica met markten over de hele wereld.",
+    "description": "Wij zijn een Costa Ricaanse onderneming gespecialiseerd in de productie, selectie en export van verse groenten, wortels en knollen.",
+    "description2": "Onze producten voldoen aan de strengste normen voor voedselveiligheid en wij beschikken over geldige GlobalGAP- en FSMA-certificeringen, die ons toegang geven tot de markten van de Verenigde Staten en Europa.",
+    "pillar_quality_title": "Premium kwaliteit",
+    "pillar_quality_desc": "Strenge selectie volgens GlobalGAP- en FSMA-normen. Volledige traceerbaarheid van het veld tot de eindbestemming.",
+    "pillar_origin_title": "Gecertificeerde herkomst",
+    "pillar_origin_desc": "Rechtstreekse inkoop bij landbouwbedrijven in Costa Rica, geselecteerd om de kwaliteit van hun bodem en hun agroklimatologische omstandigheden.",
+    "pillar_export_title": "Wereldwijd bereik",
+    "pillar_export_desc": "Wij exporteren naar markten in de Verenigde Staten en Europa met koelketen, fytosanitaire documentatie en volledige naleving van de regelgeving."
+  },
+  "video": {
+    "eyebrow": "Succesverhaal · PROCOMER",
+    "title": "Groene Groei",
+    "subtitle": "PROCOMER portretteert Tubertico als succesverhaal op het gebied van groene groei: duurzame productie, internationale certificering en export vanuit Limón naar de wereld.",
+    "play": "Video afspelen",
+    "credit": "Video geproduceerd door PROCOMER, het Costa Ricaanse agentschap voor exportbevordering · Spaans gesproken, ondertiteling beschikbaar op YouTube"
+  },
+  "certifications": {
+    "title": "Internationale certificeringen"
+  },
+  "gallery": {
+    "title": "Galerij",
+    "subtitle": "Onze faciliteiten, processen en producten.",
+    "cta": "Bekijk de volledige galerij",
+    "tab_all": "Alle",
+    "tab_products": "Producten",
+    "tab_company": "Bedrijf",
+    "closing_note": "Niet gevonden wat u zocht? Neem rechtstreeks contact met ons op en wij sturen u graag foto's, specificaties en beschikbaarheid.",
+    "closing_cta": "Informatie aanvragen"
+  },
+  "noticias": {
+    "eyebrow": "Publicaties",
+    "title": "Nieuws en blog",
+    "subtitle": "Nieuws van Tubertico: bedrijf, veld, export en duurzaamheid.",
+    "latest_eyebrow": "Laatste publicatie",
+    "latest_cta": "Bekijk nieuws en blog",
+    "type_noticia": "Nieuws",
+    "type_blog": "Blog",
+    "empty": "Binnenkort verschijnen hier nieuwe publicaties."
+  },
+  "contact": {
+    "label": "Contact",
+    "headline": "Laten we het over export hebben.",
+    "title": "Klaar om met ons te exporteren?",
+    "subtitle": "Neem contact met ons op voor onze producten, prijzen en exportvoorwaarden.",
+    "cta": "Neem contact op",
+    "whatsapp": "Schrijf ons via WhatsApp",
+    "contact_name_label": "Contactpersoon",
+    "email_label": "E-mail",
+    "phone_label": "Telefoon",
+    "address_label": "Adres",
+    "form": {
+      "name": "Naam",
+      "email": "E-mailadres",
+      "company": "Bedrijf",
+      "message": "Bericht",
+      "send": "Bericht versturen",
+      "sending": "Bezig met verzenden...",
+      "success_title": "Bericht verzonden",
+      "success_body": "Bedankt voor uw bericht. Wij nemen zo spoedig mogelijk contact met u op.",
+      "send_another": "Nog een bericht versturen",
+      "error": "Er is een probleem opgetreden bij het verzenden van uw bericht. Probeer het opnieuw of schrijf ons rechtstreeks op oficina@tubertico.com."
+    }
+  },
+  "catalog": {
+    "eyebrow": "Digitale catalogus",
+    "title": "Onze exportcatalogus",
+    "subtitle": "Referentiemateriaal met een selectie van onze producten, certificeringen en exportcapaciteit. Neem contact met ons op voor het volledige aanbod.",
+    "slide_label": "Pagina",
+    "zoom_hint": "Volledig scherm bekijken"
+  },
+  "footer": {
+    "tagline": "Kwaliteit waarop u kunt vertrouwen.",
+    "nav_title": "Navigatie",
+    "contact_title": "Contact",
+    "certs_title": "Certificeringen",
+    "legal": "Privacybeleid",
+    "rights": "© 2026 Tubertico. Alle rechten voorbehouden."
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van verse groenten, wortels en knollen, met GlobalGAP- en FSMA-certificering."
+    },
+    "products": {
+      "title": "Producten",
+      "subtitle": "Volledige catalogus van onze exportproducten."
+    },
+    "gallery": {
+      "title": "Galerij",
+      "subtitle": "Beelden van onze velden, processen en producten."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Wij staan klaar om uw exportvraag te beantwoorden."
+    },
+    "noticias": {
+      "title": "Nieuws en blog",
+      "description": "Laatste nieuws en blogberichten van Tubertico."
+    }
+  }
+}

@@ -14,20 +14,23 @@ function formatDate(dateStr: string, locale: string): string {
                     'July','August','September','October','November','December']
   const monthsFr = ['janvier','février','mars','avril','mai','juin',
                     'juillet','août','septembre','octobre','novembre','décembre']
+  const monthsNl = ['januari','februari','maart','april','mei','juni',
+                    'juli','augustus','september','oktober','november','december']
   if (locale === 'es') return `${day} de ${monthsEs[month - 1]} de ${year}`
   if (locale === 'fr') return `${day === 1 ? '1er' : day} ${monthsFr[month - 1]} ${year}`
+  if (locale === 'nl') return `${day} ${monthsNl[month - 1]} ${year}`
   return `${monthsEn[month - 1]} ${day}, ${year}`
 }
 
 const categoryLabel = (cat: string, locale: string): string => {
   const labels: Record<string, Record<string, string>> = {
-    empresa: { es: 'Empresa', en: 'Company', fr: 'Entreprise' },
-    certificaciones: { es: 'Certificaciones', en: 'Certifications', fr: 'Certifications' },
-    exportaciones: { es: 'Exportaciones', en: 'Exports', fr: 'Exportations' },
-    campo: { es: 'Campo', en: 'Field', fr: 'Champs' },
-    productos: { es: 'Productos', en: 'Products', fr: 'Produits' },
-    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability', fr: 'Durabilité' },
-    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety', fr: 'Qualité et sécurité alimentaire' },
+    empresa: { es: 'Empresa', en: 'Company', fr: 'Entreprise', nl: 'Bedrijf' },
+    certificaciones: { es: 'Certificaciones', en: 'Certifications', fr: 'Certifications', nl: 'Certificeringen' },
+    exportaciones: { es: 'Exportaciones', en: 'Exports', fr: 'Exportations', nl: 'Export' },
+    campo: { es: 'Campo', en: 'Field', fr: 'Champs', nl: 'Veld' },
+    productos: { es: 'Productos', en: 'Products', fr: 'Produits', nl: 'Producten' },
+    sostenibilidad: { es: 'Sostenibilidad', en: 'Sustainability', fr: 'Durabilité', nl: 'Duurzaamheid' },
+    'calidad-e-inocuidad': { es: 'Calidad e inocuidad', en: 'Quality & Food Safety', fr: 'Qualité et sécurité alimentaire', nl: 'Kwaliteit en voedselveiligheid' },
   }
   return labels[cat]?.[locale] ?? cat
 }
@@ -40,7 +43,7 @@ interface Props {
 export function PublicacionesList({ publicaciones, locale }: Props) {
   const t = useTranslations('noticias')
 
-  // Sanity only stores ES/EN copy, so every non-Spanish locale (en, fr)
+  // Sanity only stores ES/EN copy, so every non-Spanish locale (en, fr, nl)
   // renders the English version, falling back to Spanish when it's missing.
   const useEnglishCopy = locale !== 'es'
 

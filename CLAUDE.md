@@ -14,7 +14,7 @@ exportada como sitio estático.
   reconstruye.
 - **Despliegue**: push a `main` → DigitalOcean App Platform reconstruye.
   Publicar en Sanity dispara `.github/workflows/redeploy-from-sanity.yml`.
-- **Idiomas**: `es` (original), `en`, `fr`. Rutas bajo `app/[locale]/`.
+- **Idiomas**: `es` (original), `en`, `fr`, `nl`. Rutas bajo `app/[locale]/`.
 - **Layouts raíz múltiples**: no existe `app/layout.tsx`. `app/[locale]/layout.tsx`
   renderiza su propio `<html lang={locale}>` — así cada idioma emite el `lang`
   correcto. El redirect de `/` vive en `app/(redirect)/` con su propio layout.
@@ -32,18 +32,21 @@ exportada como sitio estático.
   `contenidoEs`/`contenidoEn`). Los componentes usan `locale !== 'es'` para
   servir la copia inglesa con reserva al español. Si algún día se añaden campos
   `*Fr`, la cascada debe ser FR → EN → ES.
-- **En la versión francesa se reutiliza el inglés** para: artículos de Sanity,
+- **En francés y neerlandés se reutiliza el inglés** para: artículos de Sanity,
   el catálogo PDF (`public/images/catalog/en/`) y los **nombres de producto**.
-  Las **descripciones** de producto sí van en francés.
+  Las **descripciones** de producto sí van traducidas.
 - **Todo texto visible vive en `messages/*.json`.** No escribas cadenas en los
-  componentes. Si añades una clave, añádela a los **tres** archivos.
+  componentes. Si añades una clave, añádela a **todos** los archivos de idioma
+  (hoy cuatro). `messages/es.json` es la referencia de qué claves deben existir.
 - Cuando un contenido esté en un idioma distinto al de la página (p. ej. el
-  vídeo de PROCOMER, en español), indícalo en la copia de EN/FR.
+  vídeo de PROCOMER, en español), indícalo en la copia de los demás idiomas.
 
-### Francés — cuidado especial
+### Idiomas que nadie del equipo lee
 
-Nadie del equipo habla francés, así que los errores no se detectan al leerlos.
-Reglas aprendidas corrigiendo la primera versión:
+Ni el francés ni el neerlandés los revisa nadie internamente, así que los
+errores no se detectan leyendo. Conviene una revisión nativa antes de dar por
+buena una traducción nueva. Reglas aprendidas corrigiendo la versión francesa,
+aplicables a cualquier idioma que se añada:
 
 - **Tipografía**: `: ; ? !` llevan espacio **antes**, y debe ser inseparable
   (` `), o el signo se queda solo al empezar la línea en móvil.
@@ -59,17 +62,25 @@ Reglas aprendidas corrigiendo la primera versión:
   `Contactez-nous` (no `Contacter maintenant` — `contacter` es transitivo y
   pide objeto).
 - Los nombres de producto van en inglés, pero si la **descripción** menciona el
-  producto, usa la palabra francesa y concuerda el género (`Chayotte fraîche`,
+  producto, usa la palabra del idioma y concuerda el género (`Chayotte fraîche`,
   femenino; no `Chayote frais`).
+
+En neerlandés no hay reglas tipográficas especiales, pero sí ojo con los
+compuestos, que se escriben unidos o con guion (`GlobalGAP- en FSMA-normen`,
+`exportproducten`), y con el registro de usted (`u`), que es el que usa el
+resto del sitio.
 
 ---
 
 ## Convenciones de código
 
 - **Lista de idiomas**: `siteConfig.locales`. No escribas `['es','en']` a mano.
+  Los nombres para lectores de pantalla van en `siteConfig.localeNames`.
 - **Rutas que cambian por idioma**: pasan por `lib/localeRoutes.ts`
   (`getNewsPath`, `getLocalizedHref`). Hoy solo Noticias
-  (`/noticias`, `/news`, `/actualites`); el resto comparte segmento en español.
+  (`/noticias`, `/news`, `/actualites`, `/nieuws`); el resto comparte segmento
+  en español. Añadir un idioma = una entrada en `newsPath` + su carpeta en
+  `app/[locale]/`.
 - **Página nueva** → añade `alternates: localeAlternates(locale, '<ruta>')` en su
   `generateMetadata` y mete la ruta en `app/sitemap.ts`. Los canonical llevan
   barra final; el sitemap debe coincidir exactamente.
@@ -101,10 +112,12 @@ vez.
 
 - Breakpoints reales a comprobar: **320, 390, 768, 1440**.
 - La barra de navegación de escritorio aparece en **`lg:` (1024px)**, no en `md:`.
-  Por debajo va el menú lateral. Motivo: con tres idiomas y las etiquetas
-  francesas (`Actualités`, `Nous contacter`) el header necesita ~925 px, así que
-  entre 768 y 1024 se salía de pantalla. **Si añades un idioma o alargas una
-  etiqueta del menú, vuelve a medirlo.**
+  Por debajo va el menú lateral. Motivo: con las etiquetas francesas
+  (`Actualités`, `Nous contacter`) el header necesita ~925 px, así que entre 768
+  y 1024 se salía de pantalla. Medido de nuevo con cuatro idiomas (el conmutador
+  `ES EN FR NL` más el CTA neerlandés `Neem contact op`): entra a 1024 px sin
+  apreturas. **Si añades un idioma o alargas una etiqueta del menú, vuelve a
+  medirlo** — es lo primero que se rompe.
 - Nada debe desbordar en horizontal: `document.documentElement.scrollWidth`
   no puede superar `clientWidth` (mide con las animaciones ya terminadas).
 - El hero usa `min-h-dvh`: las capturas de página completa con ventanas muy
@@ -133,7 +146,7 @@ fondo blanco, y en ambos casos el HTML era correcto.
 2. Servir `out/` y **mirar las páginas renderizadas** a 390 px y 1440 px.
 3. Si el cambio toca layouts, CSS global o fuentes: **compara contra el build
    anterior** (`git worktree add` del commit previo) antes de dar nada por bueno.
-4. Comprobar los tres idiomas, no solo español.
+4. Comprobar **todos** los idiomas, no solo español.
 
 Regla de fondo: **la web ya se ve bien**. Cualquier cambio nuevo se añade sin
 alterar lo que ya funcionaba; ante la duda, comparar con el estado anterior.

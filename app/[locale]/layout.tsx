@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { siteConfig } from '@/lib/siteConfig';
 import '../globals.css';
 
-const locales = ['es', 'en', 'fr'];
+const locales = ['es', 'en', 'fr', 'nl'];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
