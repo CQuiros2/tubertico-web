@@ -43,10 +43,6 @@ interface Props {
 export function PublicacionesList({ publicaciones, locale }: Props) {
   const t = useTranslations('noticias')
 
-  // Sanity only stores ES/EN copy, so every non-Spanish locale (en, fr, nl)
-  // renders the English version, falling back to Spanish when it's missing.
-  const useEnglishCopy = locale !== 'es'
-
   return (
     <div className="w-full min-h-screen bg-white">
       {/* Page header */}
@@ -73,9 +69,21 @@ export function PublicacionesList({ publicaciones, locale }: Props) {
         ) : (
           <div className="divide-y divide-gray-100">
             {publicaciones.map((pub, idx) => {
-              const titulo = (useEnglishCopy && pub.tituloEn) ? pub.tituloEn : pub.tituloEs
-              const resumen = (useEnglishCopy && pub.resumenEn) ? pub.resumenEn : pub.resumenEs
-              const contenido = (useEnglishCopy && pub.contenidoEn?.length) ? pub.contenidoEn : pub.contenidoEs
+              const titulo =
+                locale === 'fr' ? (pub.tituloFr || pub.tituloEn || pub.tituloEs) :
+                locale === 'nl' ? (pub.tituloNl || pub.tituloEn || pub.tituloEs) :
+                locale === 'en' ? (pub.tituloEn || pub.tituloEs) :
+                pub.tituloEs
+              const resumen =
+                locale === 'fr' ? (pub.resumenFr || pub.resumenEn || pub.resumenEs) :
+                locale === 'nl' ? (pub.resumenNl || pub.resumenEn || pub.resumenEs) :
+                locale === 'en' ? (pub.resumenEn || pub.resumenEs) :
+                pub.resumenEs
+              const contenido =
+                locale === 'fr' ? (pub.contenidoFr?.length ? pub.contenidoFr : pub.contenidoEn?.length ? pub.contenidoEn : pub.contenidoEs) :
+                locale === 'nl' ? (pub.contenidoNl?.length ? pub.contenidoNl : pub.contenidoEn?.length ? pub.contenidoEn : pub.contenidoEs) :
+                locale === 'en' ? (pub.contenidoEn?.length ? pub.contenidoEn : pub.contenidoEs) :
+                pub.contenidoEs
               const tipo = pub.tipoPublicacion === 'noticia' ? t('type_noticia') : t('type_blog')
               const cat = categoryLabel(pub.categoria, locale)
               const fecha = formatDate(pub.fechaPublicacion, locale)
