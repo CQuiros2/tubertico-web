@@ -3,7 +3,7 @@ import { localeUrl } from '@/lib/alternates';
 import { siteConfig } from '@/lib/siteConfig';
 
 // '/news' resolves to the locale-specific segment (/noticias, /news, /actualites).
-const routes = ['', '/productos', '/galeria', '/news', '/contacto', '/privacidad'];
+const routes = ['', '/productos', '/galeria', '/news', '/contacto', '/privacidad', '/marcas/delllano'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
