@@ -59,10 +59,11 @@ export function Footer({ locale }: FooterProps) {
   const t = useTranslations();
 
   const navLinks = [
-    { href: `/${locale}`,           label: t('nav.home')     },
-    { href: `/${locale}/productos`, label: t('nav.products') },
-    { href: `/${locale}/galeria`,   label: t('nav.gallery')  },
-    { href: `/${locale}/contacto`,  label: t('nav.contact')  },
+    { href: `/${locale}`,                 label: t('nav.home')     },
+    { href: `/${locale}/productos`,       label: t('nav.products') },
+    { href: `/${locale}/galeria`,         label: t('nav.gallery')  },
+    { href: `/${locale}/marcas/delllano`, label: t('nav.brands')   },
+    { href: `/${locale}/contacto`,        label: t('nav.contact')  },
   ];
 
   return (

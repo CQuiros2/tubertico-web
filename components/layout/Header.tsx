@@ -56,11 +56,12 @@ export function Header({ locale }: HeaderProps) {
   const solid = !isHome || scrolled || mobileOpen;
 
   const navLinks = [
-    { href: `/${locale}`,           label: t('home')     },
-    { href: `/${locale}/productos`, label: t('products') },
-    { href: `/${locale}/galeria`,   label: t('gallery')  },
-    { href: `/${locale}${getNewsPath(locale)}`, label: t('news') },
-    { href: `/${locale}/contacto`,  label: t('contact')  },
+    { href: `/${locale}`,                        label: t('home')     },
+    { href: `/${locale}/productos`,              label: t('products') },
+    { href: `/${locale}/galeria`,                label: t('gallery')  },
+    { href: `/${locale}${getNewsPath(locale)}`,  label: t('news')     },
+    { href: `/${locale}/marcas/delllano`,        label: t('brands')   },
+    { href: `/${locale}/contacto`,               label: t('contact')  },
   ];
 
   const isActive = (href: string) =>
