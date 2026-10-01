@@ -33,7 +33,7 @@
     "closing_cta_whatsapp": "Écrire sur WhatsApp",
     "items": {
       "ayote": {
-        "name": "Ayote (Squash)",
+        "name": "Pumpkin (Squash)",
         "description": "Légume d'excellente qualité, cultivé selon les normes internationales de sécurité alimentaire."
       },
       "chayote_blanco": {
@@ -41,19 +41,19 @@
         "description": "Chayotte fraîche de première qualité, idéale pour les marchés internationaux."
       },
       "coco_seco": {
-        "name": "Dried Coconut",
-        "description": "Noix de coco sèche sélectionnée, soumise à des contrôles de qualité rigoureux."
+        "name": "Coconut",
+        "description": "Noix de coco sélectionnée, soumise à des contrôles de qualité rigoureux."
       },
       "jengibre": {
         "name": "Ginger",
         "description": "Racine de gingembre frais, très demandée sur les marchés des États-Unis et d'Europe."
       },
       "malanga_blanca": {
-        "name": "White Malanga",
+        "name": "White Taro",
         "description": "Tubercule à chair blanche, riche en glucides et au goût doux."
       },
       "malanga_lila": {
-        "name": "Purple Malanga",
+        "name": "Purple Taro",
         "description": "Variété violette aux propriétés nutritionnelles supérieures et à forte demande internationale."
       },
       "name_amarillo": {
@@ -65,12 +65,12 @@
         "description": "Tubercule traditionnel costaricien, très demandé au sein de la diaspora latino-américaine."
       },
       "yautia_blanco": {
-        "name": "White Taro / Yautia",
+        "name": "White Malanga (Yautia)",
         "description": "Racine à la texture crémeuse, largement utilisée dans les cuisines internationales."
       },
       "yautia_lila": {
-        "name": "Purple Taro / Yautia",
-        "description": "Variété violette de taro à haute valeur nutritionnelle."
+        "name": "Purple Malanga (Yautia)",
+        "description": "Variété violette de yautia à haute valeur nutritionnelle."
       },
       "yuca": {
         "name": "Cassava (Yuca)",

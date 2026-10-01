@@ -33,7 +33,7 @@
     "closing_cta_whatsapp": "Schrijf ons via WhatsApp",
     "items": {
       "ayote": {
-        "name": "Ayote (Squash)",
+        "name": "Pumpkin (Squash)",
         "description": "Groente van uitstekende kwaliteit, geteeld volgens internationale normen voor voedselveiligheid."
       },
       "chayote_blanco": {
@@ -41,19 +41,19 @@
         "description": "Verse chayote van eerste kwaliteit, ideaal voor internationale markten."
       },
       "coco_seco": {
-        "name": "Dried Coconut",
-        "description": "Geselecteerde gedroogde kokosnoot, onderworpen aan strenge kwaliteitscontroles."
+        "name": "Coconut",
+        "description": "Geselecteerde kokosnoot, onderworpen aan strenge kwaliteitscontroles."
       },
       "jengibre": {
         "name": "Ginger",
         "description": "Verse gemberwortel, sterk gevraagd op de markten van de Verenigde Staten en Europa."
       },
       "malanga_blanca": {
-        "name": "White Malanga",
+        "name": "White Taro",
         "description": "Knol met wit vruchtvlees, rijk aan koolhydraten en met een milde smaak."
       },
       "malanga_lila": {
-        "name": "Purple Malanga",
+        "name": "Purple Taro",
         "description": "Paarse variëteit met superieure voedingswaarde en grote internationale vraag."
       },
       "name_amarillo": {
@@ -65,12 +65,12 @@
         "description": "Traditionele Costa Ricaanse knol, sterk gevraagd binnen de Latijns-Amerikaanse diaspora."
       },
       "yautia_blanco": {
-        "name": "White Taro / Yautia",
+        "name": "White Malanga (Yautia)",
         "description": "Wortelgewas met romige textuur, veel gebruikt in internationale keukens."
       },
       "yautia_lila": {
-        "name": "Purple Taro / Yautia",
-        "description": "Paarse tarovariëteit met hoge voedingswaarde."
+        "name": "Purple Malanga (Yautia)",
+        "description": "Paarse yautiavariëteit met hoge voedingswaarde."
       },
       "yuca": {
         "name": "Cassava (Yuca)",

@@ -33,7 +33,7 @@
     "closing_cta_whatsapp": "Message us on WhatsApp",
     "items": {
       "ayote": {
-        "name": "Ayote (Squash)",
+        "name": "Pumpkin (Squash)",
         "description": "High-quality vegetable cultivated to international food safety standards."
       },
       "chayote_blanco": {
@@ -41,19 +41,19 @@
         "description": "Fresh, first-grade chayote, ideal for international markets."
       },
       "coco_seco": {
-        "name": "Dried Coconut",
-        "description": "Selected dried coconut exported under strict quality controls."
+        "name": "Coconut",
+        "description": "Selected coconut exported under strict quality controls."
       },
       "jengibre": {
         "name": "Ginger",
         "description": "Fresh ginger root with high demand in US and European markets."
       },
       "malanga_blanca": {
-        "name": "White Malanga",
+        "name": "White Taro",
         "description": "White-fleshed tuber, rich in carbohydrates with a mild flavor."
       },
       "malanga_lila": {
-        "name": "Purple Malanga",
+        "name": "Purple Taro",
         "description": "Purple variety with superior nutritional properties and high international demand."
       },
       "name_amarillo": {
@@ -65,12 +65,12 @@
         "description": "Traditional Costa Rican tuber with strong demand in the Latin American diaspora."
       },
       "yautia_blanco": {
-        "name": "White Taro / Yautia",
+        "name": "White Malanga (Yautia)",
         "description": "Creamy-textured root, widely used in international cuisines."
       },
       "yautia_lila": {
-        "name": "Purple Taro / Yautia",
-        "description": "Purple taro variety with high nutritional value."
+        "name": "Purple Malanga (Yautia)",
+        "description": "Purple yautia variety with high nutritional value."
       },
       "yuca": {
         "name": "Cassava (Yuca)",
