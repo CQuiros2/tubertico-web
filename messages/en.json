@@ -184,7 +184,8 @@
   "pages": {
     "home": {
       "title": "Home",
-      "description": "Costa Rican company specialized in the production and export of fresh vegetables, roots and tubers with GlobalGAP and FSMA certifications."
+      "description": "Costa Rican company specialized in the production and export of fresh vegetables, roots and tubers with GlobalGAP and FSMA certifications.",
+      "seo_title": "Tubertico — Roots, tubers and vegetables exported from Costa Rica"
     },
     "products": {
       "title": "Products",
@@ -202,5 +203,11 @@
       "title": "News & Blog",
       "description": "Latest news and blog posts from Tubertico."
     }
+  },
+  "not_found": {
+    "title": "We couldn't find this page",
+    "text": "The link may be mistyped, or the page may no longer exist.",
+    "home": "Go to the home page",
+    "products": "See our products"
   }
 }

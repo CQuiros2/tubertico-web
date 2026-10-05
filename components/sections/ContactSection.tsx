@@ -192,6 +192,10 @@ export function ContactSection({ locale, banner }: ContactSectionProps) {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              {/* Campo trampa contra spam: invisible para las personas. Los robots lo
+                  llenan, y Formspree descarta en silencio todo envío que traiga _gotcha. */}
+              <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true"
+                className="absolute -left-[9999px] h-0 w-0 opacity-0" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2">

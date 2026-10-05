@@ -21,6 +21,14 @@ exportada como sitio estático.
   **No recrees `app/layout.tsx`**: volvería a fijar un solo `lang` para todo.
   Efecto conocido: el `404.html` generado no lleva `lang` (Next exige
   `app/layout.tsx` para personalizarlo).
+- **Página 404 propia**: como no hay `app/layout.tsx`, Next no genera una 404
+  global personalizada. Se arma como página normal en
+  `app/(redirect)/pagina-no-encontrada/` y el `postbuild`
+  (`scripts/copiar-404.mjs`) la copia a `out/404.html`, que es lo que el
+  hosting sirve para cualquier dirección inexistente. Elige el idioma en el
+  navegador por el primer tramo de la URL; los textos están en `not_found` de
+  `messages/*.json`. Si el build se corre sin `npm run build` (p. ej. `next build`
+  a secas), el postbuild no corre y vuelve la 404 genérica de Next.
 
 ---
 
@@ -134,6 +142,15 @@ vez.
 
 ## Rendimiento
 
+- **Imágenes**: `images.unoptimized` está activo (exportación estática), así
+  que se sirven tal cual se suben. Antes de subir una foto: máximo **2000 px**
+  en el lado largo y JPEG calidad ~82 (unos 200-600 KB). En octubre de 2026 se
+  comprimieron las existentes: 49,8 MB → 14,2 MB, sin cambio visible.
+- **Vista previa al compartir** (Open Graph / Twitter): en el layout de
+  `[locale]`, con `public/images/og-tubertico.jpg` (1200×630) y
+  `pages.home.seo_title`. La portada usa ese mismo título completo como
+  `title.absolute` porque no hereda la plantilla «%s | Tubertico».
+
 - Los **embeds de terceros van con patrón fachada**: imagen local + botón, y el
   `<iframe>` solo se inyecta al hacer clic (ver `VideoFeature.tsx`). Un iframe de
   YouTube directo mete ~1 MB de JS de terceros y cookies antes de que nadie lo
@@ -166,5 +183,9 @@ alterar lo que ya funcionaba; ante la duda, comparar con el estado anterior.
   El Studio está en `~/sanity-studio`.
 - `lib/siteConfig.ts` centraliza contacto, redes, certificaciones y locales.
 - Galería: `public/images/gallery/product-N.jpg` y `company-N.jpg`; los totales
-  se declaran en las constantes de `GalleryGrid.tsx`.
+  se declaran en las constantes de `GalleryGrid.tsx`. **Numeración sin huecos**: si se borra
+  una foto, renumerar las siguientes (`git mv`) y bajar el total. La galería
+  oculta las que faltan, pero el navegador igual las pide y da error 404.
 - Formulario de contacto: Formspree (`NEXT_PUBLIC_FORMSPREE_ID` en `.env.local`).
+  Lleva un campo trampa `_gotcha` invisible: Formspree descarta en silencio los
+  envíos que lo traen lleno (robots). No quitarlo ni hacerlo visible.

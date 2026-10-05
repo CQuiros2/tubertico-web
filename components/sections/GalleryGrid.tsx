@@ -18,7 +18,7 @@ type Tab = 'all' | 'products' | 'company';
 //   2. Increment the relevant count below.
 //   3. Run `npm run build` — no other code changes needed.
 // Missing files within the range are skipped automatically.
-const PRODUCT_COUNT = 12;
+const PRODUCT_COUNT = 10;
 const COMPANY_COUNT = 12;
 // ──────────────────────────────────────────────────────────────────────────
 

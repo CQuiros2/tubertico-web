@@ -8,6 +8,7 @@ import { siteConfig } from '@/lib/siteConfig';
 import '../globals.css';
 
 const locales = ['es', 'en', 'fr', 'nl'];
+const OG_LOCALE: Record<string, string> = { es: 'es_CR', en: 'en_US', fr: 'fr_FR', nl: 'nl_NL' };
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -27,6 +28,21 @@ export async function generateMetadata({
       default: siteConfig.name,
     },
     description: t('description'),
+    // Vista previa al compartir el enlace (WhatsApp, LinkedIn, correo…)
+    openGraph: {
+      type: 'website',
+      siteName: siteConfig.name,
+      locale: OG_LOCALE[locale] ?? 'es_CR',
+      title: t('seo_title'),
+      description: t('description'),
+      images: [{ url: '/images/og-tubertico.jpg', width: 1200, height: 630, alt: siteConfig.name }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('seo_title'),
+      description: t('description'),
+      images: ['/images/og-tubertico.jpg'],
+    },
     icons: {
       icon: '/favicon.png',
       apple: '/favicon.png',

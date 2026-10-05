@@ -184,7 +184,8 @@
   "pages": {
     "home": {
       "title": "Home",
-      "description": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van verse groenten, wortelgewassen en knollen, met GlobalGAP- en FSMA-certificering."
+      "description": "Costa Ricaanse onderneming gespecialiseerd in de productie en export van verse groenten, wortelgewassen en knollen, met GlobalGAP- en FSMA-certificering.",
+      "seo_title": "Tubertico — Export van wortelgewassen, knollen en groenten uit Costa Rica"
     },
     "products": {
       "title": "Producten",
@@ -202,5 +203,11 @@
       "title": "Nieuws en blog",
       "description": "Laatste nieuws en blogberichten van Tubertico."
     }
+  },
+  "not_found": {
+    "title": "We konden deze pagina niet vinden",
+    "text": "De link is misschien verkeerd getypt, of de pagina bestaat niet meer.",
+    "home": "Naar de homepage",
+    "products": "Bekijk onze producten"
   }
 }

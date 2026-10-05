@@ -184,7 +184,8 @@
   "pages": {
     "home": {
       "title": "Inicio",
-      "description": "Empresa costarricense especializada en la producción y exportación de hortalizas, raíces y tubérculos frescos con certificaciones GlobalGAP y FSMA."
+      "description": "Empresa costarricense especializada en la producción y exportación de hortalizas, raíces y tubérculos frescos con certificaciones GlobalGAP y FSMA.",
+      "seo_title": "Tubertico — Exportación de raíces, tubérculos y hortalizas de Costa Rica"
     },
     "products": {
       "title": "Productos",
@@ -202,5 +203,11 @@
       "title": "Noticias y Blog",
       "description": "Últimas noticias y publicaciones de blog de Tubertico."
     }
+  },
+  "not_found": {
+    "title": "No encontramos esta página",
+    "text": "Puede que el enlace esté mal escrito o que la página ya no exista.",
+    "home": "Ir al inicio",
+    "products": "Ver productos"
   }
 }

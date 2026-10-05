@@ -20,7 +20,8 @@ interface PageProps {
 export async function generateMetadata({ params: { locale } }: PageProps): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'pages.home' });
   return {
-    title: t('title'),
+    // La portada no hereda la plantilla «%s | Tubertico» del layout (mismo nivel): título completo
+    title: { absolute: t('seo_title') },
     description: t('description'),
     alternates: localeAlternates(locale, ''),
   };

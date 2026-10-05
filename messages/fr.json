@@ -184,7 +184,8 @@
   "pages": {
     "home": {
       "title": "Accueil",
-      "description": "Entreprise costaricienne spécialisée dans la production et l'exportation de légumes, de racines et de tubercules frais, certifiée GlobalGAP et FSMA."
+      "description": "Entreprise costaricienne spécialisée dans la production et l'exportation de légumes, de racines et de tubercules frais, certifiée GlobalGAP et FSMA.",
+      "seo_title": "Tubertico — Exportation de racines, tubercules et légumes du Costa Rica"
     },
     "products": {
       "title": "Produits",
@@ -202,5 +203,11 @@
       "title": "Actualités et blog",
       "description": "Dernières actualités et publications du blog de Tubertico."
     }
+  },
+  "not_found": {
+    "title": "Nous n'avons pas trouvé cette page",
+    "text": "Le lien est peut-être mal saisi, ou la page n'existe plus.",
+    "home": "Retour à l'accueil",
+    "products": "Voir nos produits"
   }
 }

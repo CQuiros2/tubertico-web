@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Tubertico',
   robots: { index: false, follow: true },
+  icons: { icon: '/favicon.png', apple: '/favicon.png' },
 };
 
 // Root layout for "/" only — a bare shell for the client-side language
